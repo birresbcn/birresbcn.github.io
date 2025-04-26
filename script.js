@@ -25,7 +25,15 @@ document.addEventListener('DOMContentLoaded', function () {
           download: true,
           header: true,
           complete: function(results) {
-            const data = results.data;
+            let data = results.data;
+            const seen = new Map();
+            data.forEach(row => {
+              if (row.Local) {
+                seen.set(row.Local, row);
+              }
+            });
+            data = Array.from(seen.values());
+
             const tableBody = $('#birresTable tbody'); 
             data.forEach(row => {
               if (!row.Local) return;
