@@ -1,0 +1,2650 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>BirresBCN</title>
+    <link rel="icon" href="img/favicon.png">
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a2b3b7d77adc71feecff48667843c2f4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-ripple-effect@1.0.5/dist/ripple.min.css"/>
+    
+            <style>
+                .easy-button-button {
+                  display: block !important;
+                }
+
+                .tag-filter-tags-container {
+                  left: 30px;
+                }
+            </style>
+        
+</head>
+<body class="map-page">
+    
+    <button id="fab">≡</button>
+    <div class="fab-menu" id="fabMenu">
+      <a href="about/" target="_self"><i class="fa fa-info-circle"></i></a>
+      <a href="table/" target="_self"><i class="fa fa-table"></i></a>
+      <a href="https://forms.gle/uKCZcvZNR6xTuZHCA"  target="_blank">+ &#127866</a>
+    </div>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+            <div class="folium-map" id="map_a2b3b7d77adc71feecff48667843c2f4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a2b3b7d77adc71feecff48667843c2f4 = L.map(
+                "map_a2b3b7d77adc71feecff48667843c2f4",
+                {
+                    center: [41.3879, 2.1699],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_a2b3b7d77adc71feecff48667843c2f4);
+
+            
+
+        
+    
+            var tile_layer_1b482d55b22940d4f8a6afee8bc04e2d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1b482d55b22940d4f8a6afee8bc04e2d.addTo(map_a2b3b7d77adc71feecff48667843c2f4);
+        
+    
+            var locate_control_3a81708dd95636b544524614ffd72f73 = L.control.locate(
+                {"keepCurrentZoomLevel": true}
+            ).addTo(map_a2b3b7d77adc71feecff48667843c2f4);
+            
+                locate_control_3a81708dd95636b544524614ffd72f73.start();
+            
+        
+    
+            var heat_map_305428f82a2aec79229a2dbf23017f04 = L.heatLayer(
+                [[41.41251743900398, 2.196292690460221, 2.0], [41.42985344644889, 2.193865897127358, 2.1], [41.39211043659654, 2.1703972938656597, 3.5], [41.41017465510055, 2.1950544363542326, 2.3], [41.390634771304775, 2.140183309731352, 1.9], [41.39184711831014, 2.180088158895469, 2.8], [41.38514660620636, 2.1660964233136, 2.85], [41.382894128546, 2.1755330502165413, 3.0], [41.389237877878564, 2.17399653189435, 2.5], [41.395997549197716, 2.145519016635264, 2.0], [41.380575657524695, 2.1751711194223, 3.8], [41.43009699531158, 2.1734232718273057, 2.1], [41.37857056329042, 2.171576002153089, 2.25], [41.40241311304095, 2.158198713631431, 3.3], [41.4285260865383, 2.186296189023809, 2.2], [41.38330567804903, 2.1820107079154383, 3.55], [41.38475498867363, 2.1767228472593008, 2.75], [41.408721235651825, 2.160155934475473, 2.3], [41.38848794630618, 2.161794523169726, 2.9], [41.42408882230496, 2.175749463010626, 2.1], [41.42588476209456, 2.191816385231935, 2.3], [41.42851050021063, 2.1759701981642734, 2.2], [41.372218220256784, 2.1626665014894755, 2.5], [41.383495282854, 2.1609089795655083, 2.5], [41.38934760870726, 2.1578678009894148, 3.0], [41.379330080396905, 2.1787408874629053, 2.5], [41.43092165925054, 2.181871205789937, 2.2], [41.42714576765212, 2.1743145321251838, 2.2], [41.43049711808951, 2.1710518834040227, 2.05], [41.38985151341556, 2.163829585587909, 4.0], [41.431354585682506, 2.1810001367905953, 2.2], [41.40494150771099, 2.1569772583484954, 3.4], [41.40125943479774, 2.2012318089568828, 2.6], [41.386984398528234, 2.180284215136492, 3.5], [41.38365344910685, 2.1788453978382685, 3.0], [41.37550241585035, 2.15864437833145, 3.0], [41.43016642909363, 2.1760456352311257, 2.2], [41.43031962685466, 2.1864179976759495, 2.6], [41.411234085031076, 2.217577353829852, 2.2], [41.430295829794495, 2.186486845194863, 2.0], [41.432031875538236, 2.1834996627737056, 2.1], [41.42911214722657, 2.175258458532866, 2.2], [41.43028819175985, 2.18534966577336, 2.45], [41.4237674, 2.1883707, 2.1], [41.43977197266024, 2.175531445891712, 2.3], [41.380779742533285, 2.1613385807082697, 2.2], [41.42323817724328, 2.1872569864284883, 2.2], [41.42013332767205, 2.180174830679414, 2.0], [41.387090343369955, 2.1586013664013137, 2.3], [41.401764760051606, 2.156990036367222, 2.95], [41.374771049203524, 2.164162153061724, 3.0], [41.408518873849374, 2.174510307534942, 2.4], [41.40473407848793, 2.173974113472083, 2.4], [41.37504796747977, 2.147203743603055, 2.4], [41.377616025714566, 2.153046846358869, 2.1], [41.40557637412023, 2.1749850418989842, 2.2], [41.42978856640363, 2.1818249111360744, 2.0], [41.400517187583006, 2.1904095387753277, 2.3], [41.421616295954735, 2.1873861272895754, 2.2], [41.41986367340667, 2.183487020989466, 2.2], [41.38784534222763, 2.15127459149067, 2.2], [41.38543795706633, 2.178607359063933, 3.0], [41.421508467377166, 2.187547550415945, 2.1], [41.40741349600727, 2.1856139583689926, 2.0], [41.41087407456048, 2.189314861828827, 2.2], [41.38128389549683, 2.163645042476203, 2.95], [41.38557956417174, 2.161027740473712, 3.5], [41.38632984327765, 2.1661181578155615, 3.5], [41.408006945571806, 2.188772660999988, 2.5], [41.42651834902185, 2.179274452917286, 2.0], [41.43144819381847, 2.176895273143162, 2.2], [41.4325017673186, 2.1776774828171765, 2.0], [41.39788961393264, 2.189971823904678, 3.0], [41.396568123490844, 2.1923899017652846, 3.0], [41.37369211586075, 2.1373863075608246, 3.5], [41.40161678190858, 2.1964034093614044, 2.5], [41.37838461153486, 2.160810249215611, 2.2], [41.388823735667366, 2.1562481362875845, 2.3], [41.409627837645736, 2.1886519664530404, 2.2], [41.40934765741025, 2.1956471555580284, 1.8], [41.41606420167088, 2.187214379306511, 2.3], [41.37310406553604, 2.1670828335048364, 4.0], [41.374347541706804, 2.167415872281784, 3.5], [41.37622203018065, 2.1601804600990824, 4.0], [41.3793935577922, 2.161777698068039, 3.15], [41.38629424331948, 2.1645686655941936, 3.0], [41.424954225924125, 2.190465180121961, 2.2], [41.37654438735631, 2.1656022168601727, 2.8], [41.38621061759952, 2.164687690754541, 3.2], [41.37502697329077, 2.172646754577266, 2.7], [41.42673758376823, 2.1774173193179496, 2.1], [41.37660449883098, 2.157095301532445, 2.5], [41.43782999326304, 2.1920163171794034, 2.0], [41.37811341019837, 2.1695627530637047, 2.0], [41.37800120586346, 2.1696908285440615, 2.75], [41.373441817379465, 2.1563896873683865, 2.2], [41.42328628666958, 2.1884453003627358, 2.1], [41.37234998779161, 2.156053121865185, 2.5], [41.38294863131283, 2.1652924199786674, 3.0], [41.39363920794346, 2.174324880883583, 4.0], [41.406742128359966, 2.2016598733334223, 3.0], [41.410819989569795, 2.2158731540256125, 2.5], [41.437656211447866, 2.1924420736224084, 2.1], [41.39266024255506, 2.191322493601034, 2.3], [41.42984843983926, 2.180947949027388, 2.3]],
+                {
+  "minOpacity": 0.2,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+  "gradient": {
+  "0.0": "white",
+  "1.0": "black",
+},
+}
+            );
+        
+    
+            heat_map_305428f82a2aec79229a2dbf23017f04.addTo(map_a2b3b7d77adc71feecff48667843c2f4);
+        
+    
+            var feature_group_f4cd69069d02d5d7875c376d4300c82f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_72f5489c578573ed1d92fd7b56f26001 = L.circleMarker(
+                [41.41251743900398, 2.196292690460221],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_7c8b84e5e5c40256af7fe10cda26efa8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2a71305f33f3c8f601b26a0b0a038532 = $(`<div id="html_2a71305f33f3c8f601b26a0b0a038532" style="width: 100.0%; height: 100.0%;"><b>Bar Llusia</b><br>2.0€ (3/11/23)<br><a href="https://www.google.com/maps/place/Bar+Llusia/data=!4m2!3m1!19sChIJ_eRIUTCjpBIRhgsDzO-w9Pg" target="_blank">Google Maps</a></div>`)[0];
+                popup_7c8b84e5e5c40256af7fe10cda26efa8.setContent(html_2a71305f33f3c8f601b26a0b0a038532);
+            
+        
+
+        circle_marker_72f5489c578573ed1d92fd7b56f26001.bindPopup(popup_7c8b84e5e5c40256af7fe10cda26efa8)
+        ;
+
+        
+    
+    
+            var circle_marker_80d00090df56fd5a2d66e3129f04f9fc = L.circleMarker(
+                [41.42985344644889, 2.193865897127358],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_47d59f268e2182e1ee7ea97a8196501a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_20e0fbcf6ff3f110671133ef32d0efdb = $(`<div id="html_20e0fbcf6ff3f110671133ef32d0efdb" style="width: 100.0%; height: 100.0%;"><b>El Café de Santi</b><br>2.1€ (3/11/23)<br><a href="https://www.google.com/maps/place/El+Caf%C3%A9+de+Santi/data=!4m2!3m1!19sChIJBT1HdNC8pBIRb9_BCyOVdJI" target="_blank">Google Maps</a></div>`)[0];
+                popup_47d59f268e2182e1ee7ea97a8196501a.setContent(html_20e0fbcf6ff3f110671133ef32d0efdb);
+            
+        
+
+        circle_marker_80d00090df56fd5a2d66e3129f04f9fc.bindPopup(popup_47d59f268e2182e1ee7ea97a8196501a)
+        ;
+
+        
+    
+    
+            var circle_marker_81c5a34f9374cdf68f5902cb1c571154 = L.circleMarker(
+                [41.39211043659654, 2.1703972938656597],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6400", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_2e681e80f979ea92bf6d52542ff0c794 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb38266c04b0edc5c1df153c2370ab92 = $(`<div id="html_cb38266c04b0edc5c1df153c2370ab92" style="width: 100.0%; height: 100.0%;"><b>Snooker</b><br>3.5€ (4/11/23)<br><a href="https://www.google.com/maps/place/Snooker/data=!4m2!3m1!19sChIJx4Umbe6ipBIR816ScIACqUk" target="_blank">Google Maps</a></div>`)[0];
+                popup_2e681e80f979ea92bf6d52542ff0c794.setContent(html_cb38266c04b0edc5c1df153c2370ab92);
+            
+        
+
+        circle_marker_81c5a34f9374cdf68f5902cb1c571154.bindPopup(popup_2e681e80f979ea92bf6d52542ff0c794)
+        ;
+
+        
+    
+    
+            var circle_marker_6666617151fbcc1e711078bec748b844 = L.circleMarker(
+                [41.41017465510055, 2.1950544363542326],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_572467fd72de10695a72179a71896978 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a2f5f990533ddf1812bee30d6430f076 = $(`<div id="html_a2f5f990533ddf1812bee30d6430f076" style="width: 100.0%; height: 100.0%;"><b>Bar Lafuente</b><br>2.3€ (9/11/23)<br><a href="https://www.google.com/maps/place/Bar+Lafuente/data=!4m2!3m1!19sChIJS4qSpTqjpBIR_I3iSSeIlbc" target="_blank">Google Maps</a></div>`)[0];
+                popup_572467fd72de10695a72179a71896978.setContent(html_a2f5f990533ddf1812bee30d6430f076);
+            
+        
+
+        circle_marker_6666617151fbcc1e711078bec748b844.bindPopup(popup_572467fd72de10695a72179a71896978)
+        ;
+
+        
+    
+    
+            var circle_marker_ca1da82ff09b317afe425c9174081a69 = L.circleMarker(
+                [41.390634771304775, 2.140183309731352],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5faf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Les Corts"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_4a267881b85018fafe33d9bfd9a94ace = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_feae7fde6243f6360a253bdd68d90427 = $(`<div id="html_feae7fde6243f6360a253bdd68d90427" style="width: 100.0%; height: 100.0%;"><b>GENA'S Bar</b><br>1.9€ (16/11/23)<br><a href="https://www.google.com/maps/place/GENA'S+Bar/data=!4m2!3m1!19sChIJv1JZ93mYpBIRqD6gxyjdvVk" target="_blank">Google Maps</a></div>`)[0];
+                popup_4a267881b85018fafe33d9bfd9a94ace.setContent(html_feae7fde6243f6360a253bdd68d90427);
+            
+        
+
+        circle_marker_ca1da82ff09b317afe425c9174081a69.bindPopup(popup_4a267881b85018fafe33d9bfd9a94ace)
+        ;
+
+        
+    
+    
+            var circle_marker_73f9c4bf8e198ed46985fd340854bad6 = L.circleMarker(
+                [41.39184711831014, 2.180088158895469],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffd100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_497dfce9a8fada5a1f7b47dc13918315 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b985015dc71c3c063b47f9af08d85112 = $(`<div id="html_b985015dc71c3c063b47f9af08d85112" style="width: 100.0%; height: 100.0%;"><b>La Triunfal</b><br>2.8€ (24/11/23)<br><a href="https://www.google.com/maps/place/La+Triunfal/data=!4m2!3m1!19sChIJMYlDdFSjpBIRhVjo8dGCGug" target="_blank">Google Maps</a></div>`)[0];
+                popup_497dfce9a8fada5a1f7b47dc13918315.setContent(html_b985015dc71c3c063b47f9af08d85112);
+            
+        
+
+        circle_marker_73f9c4bf8e198ed46985fd340854bad6.bindPopup(popup_497dfce9a8fada5a1f7b47dc13918315)
+        ;
+
+        
+    
+    
+            var circle_marker_fac3f43c186e05f198b168f9198b745a = L.circleMarker(
+                [41.38514660620636, 2.1660964233136],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffcc00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_d1db82c36f7f0f92ff70f1d8df960ade = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_863a110c84aaf1460696bdc9597d7361 = $(`<div id="html_863a110c84aaf1460696bdc9597d7361" style="width: 100.0%; height: 100.0%;"><b>Breik Cafetería</b><br>2.85€ (29/11/23)<br><a href="https://www.google.com/maps/place/Breik+Cafeter%C3%ADa/data=!4m2!3m1!19sChIJ8T7iOn2jpBIRSIvLWAFEMfc" target="_blank">Google Maps</a></div>`)[0];
+                popup_d1db82c36f7f0f92ff70f1d8df960ade.setContent(html_863a110c84aaf1460696bdc9597d7361);
+            
+        
+
+        circle_marker_fac3f43c186e05f198b168f9198b745a.bindPopup(popup_d1db82c36f7f0f92ff70f1d8df960ade)
+        ;
+
+        
+    
+    
+            var circle_marker_a5fc8e24112303956df598e9db3a0310 = L.circleMarker(
+                [41.382894128546, 2.1755330502165413],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_e5761361968e6b2aa474ce024229db1f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_497f7e17c78f79a88aed07a94eeb2e82 = $(`<div id="html_497f7e17c78f79a88aed07a94eeb2e82" style="width: 100.0%; height: 100.0%;"><b>La Alcoba Azul - Tapas</b><br>3.0€ (2/12/23)<br><a href="https://www.google.com/maps/place/La+Alcoba+Azul+-+Tapas/data=!4m2!3m1!19sChIJ8dubNviipBIRfwWByME5Om0" target="_blank">Google Maps</a></div>`)[0];
+                popup_e5761361968e6b2aa474ce024229db1f.setContent(html_497f7e17c78f79a88aed07a94eeb2e82);
+            
+        
+
+        circle_marker_a5fc8e24112303956df598e9db3a0310.bindPopup(popup_e5761361968e6b2aa474ce024229db1f)
+        ;
+
+        
+    
+    
+            var circle_marker_fce8400bd93b578bfd338c35960c9632 = L.circleMarker(
+                [41.389237877878564, 2.17399653189435],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff300", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_7d53a9899ffcb4e00a35e057accfc7cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_69bb38f7365981359d3cefba59b0456d = $(`<div id="html_69bb38f7365981359d3cefba59b0456d" style="width: 100.0%; height: 100.0%;"><b>gastrocat</b><br>2.5€ (5/12/23)<br><a href="https://www.google.com/maps/place/gastrocat/data=!4m2!3m1!19sChIJgQ3-tNqjpBIRD5IHFwa59w8" target="_blank">Google Maps</a></div>`)[0];
+                popup_7d53a9899ffcb4e00a35e057accfc7cf.setContent(html_69bb38f7365981359d3cefba59b0456d);
+            
+        
+
+        circle_marker_fce8400bd93b578bfd338c35960c9632.bindPopup(popup_7d53a9899ffcb4e00a35e057accfc7cf)
+        ;
+
+        
+    
+    
+            var circle_marker_d0284748828e461134822faab995d338 = L.circleMarker(
+                [41.395997549197716, 2.145519016635264],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sarri\u00e0-Sant Gervasi"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_2217c8762e0636b61062f74a690b14b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b5fc083e7c3c882958890f51d5c141e = $(`<div id="html_0b5fc083e7c3c882958890f51d5c141e" style="width: 100.0%; height: 100.0%;"><b>Bar Marcel Santaló</b><br>2.0€ (5/12/23)<br><a href="https://www.google.com/maps/place/Bar+Marcel+Santal%C3%B3/data=!4m2!3m1!19sChIJUVsN-52ipBIR0PZ_Xtr0FRU" target="_blank">Google Maps</a></div>`)[0];
+                popup_2217c8762e0636b61062f74a690b14b6.setContent(html_0b5fc083e7c3c882958890f51d5c141e);
+            
+        
+
+        circle_marker_d0284748828e461134822faab995d338.bindPopup(popup_2217c8762e0636b61062f74a690b14b6)
+        ;
+
+        
+    
+    
+            var circle_marker_43d0e6efcf85e796244374e564cebfa1 = L.circleMarker(
+                [41.380575657524695, 2.1751711194223],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff2700", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_b543c6f5da918361ceba1cd1832fac7e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ea527df30a9fa9a6a1344b66e210d217 = $(`<div id="html_ea527df30a9fa9a6a1344b66e210d217" style="width: 100.0%; height: 100.0%;"><b>Sidecar</b><br>3.8€ (9/12/23)<br><a href="https://www.google.com/maps/place/Sidecar/data=!4m2!3m1!19sChIJaygJ41eipBIR_jably1jh5o" target="_blank">Google Maps</a></div>`)[0];
+                popup_b543c6f5da918361ceba1cd1832fac7e.setContent(html_ea527df30a9fa9a6a1344b66e210d217);
+            
+        
+
+        circle_marker_43d0e6efcf85e796244374e564cebfa1.bindPopup(popup_b543c6f5da918361ceba1cd1832fac7e)
+        ;
+
+        
+    
+    
+            var circle_marker_02cec424862739f9657277637762c4d8 = L.circleMarker(
+                [41.43009699531158, 2.1734232718273057],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_a7de79df84d1065dfbc44c8467d46d99 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bef4d5295c1269e861e2d0f06c9cfdba = $(`<div id="html_bef4d5295c1269e861e2d0f06c9cfdba" style="width: 100.0%; height: 100.0%;"><b>Il café di Donatto</b><br>2.1€ (27/12/23)<br><a href="https://www.google.com/maps/place/Il+caf%C3%A9+di+Donatto/data=!4m2!3m1!19sChIJz_WP68C9pBIR6oXn8hEKwxY" target="_blank">Google Maps</a></div>`)[0];
+                popup_a7de79df84d1065dfbc44c8467d46d99.setContent(html_bef4d5295c1269e861e2d0f06c9cfdba);
+            
+        
+
+        circle_marker_02cec424862739f9657277637762c4d8.bindPopup(popup_a7de79df84d1065dfbc44c8467d46d99)
+        ;
+
+        
+    
+    
+            var circle_marker_880c6bc7f29aebceedf4e99efe846cc7 = L.circleMarker(
+                [41.37857056329042, 2.171576002153089],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d2e900", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_978d2450e0b20ee6a01cba59ca992c29 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7db1d6cad2c4662f955b2848a1a679c9 = $(`<div id="html_7db1d6cad2c4662f955b2848a1a679c9" style="width: 100.0%; height: 100.0%;"><b>Preet Tandori Indian Restaurant</b><br>2.25€ (2/01/24)<br><a href="https://www.google.com/maps/place/Preet+Tandori+Indian+Restaurant/data=!4m2!3m1!19sChIJKb2W_FiipBIR3UdM8obKvkk" target="_blank">Google Maps</a></div>`)[0];
+                popup_978d2450e0b20ee6a01cba59ca992c29.setContent(html_7db1d6cad2c4662f955b2848a1a679c9);
+            
+        
+
+        circle_marker_880c6bc7f29aebceedf4e99efe846cc7.bindPopup(popup_978d2450e0b20ee6a01cba59ca992c29)
+        ;
+
+        
+    
+    
+            var circle_marker_f5f921d604714733cdd120a98c67ef9c = L.circleMarker(
+                [41.40241311304095, 2.158198713631431],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8e00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Gr\u00e0cia"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_b7e8d38aa3a4a49e6555eaf6501ffc4a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_68f407669f8bfa3e00cd13ea14177e0a = $(`<div id="html_68f407669f8bfa3e00cd13ea14177e0a" style="width: 100.0%; height: 100.0%;"><b>Pepa Tomate Gràcia</b><br>3.3€ (3/01/24)<br><a href="https://www.google.com/maps/place/Pepa+Tomate+Gr%C3%A0cia/data=!4m2!3m1!19sChIJZ9fQvb2ipBIRyaZy8wUqRGQ" target="_blank">Google Maps</a></div>`)[0];
+                popup_b7e8d38aa3a4a49e6555eaf6501ffc4a.setContent(html_68f407669f8bfa3e00cd13ea14177e0a);
+            
+        
+
+        circle_marker_f5f921d604714733cdd120a98c67ef9c.bindPopup(popup_b7e8d38aa3a4a49e6555eaf6501ffc4a)
+        ;
+
+        
+    
+    
+            var circle_marker_5977eb8522cff5210e5b44ac7d589de4 = L.circleMarker(
+                [41.4285260865383, 2.186296189023809],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_cbb20fef1a6344f7d4b264404b75fd59 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f44b15be0e7a071bd5198e701326e16f = $(`<div id="html_f44b15be0e7a071bd5198e701326e16f" style="width: 100.0%; height: 100.0%;"><b>Resturante Ramen</b><br>2.2€ (5/01/24)<br><a href="https://www.google.com/maps/place/Resturante+Ramen/data=!4m2!3m1!19sChIJRZwaxte8pBIRcwJo9F8xkuY" target="_blank">Google Maps</a></div>`)[0];
+                popup_cbb20fef1a6344f7d4b264404b75fd59.setContent(html_f44b15be0e7a071bd5198e701326e16f);
+            
+        
+
+        circle_marker_5977eb8522cff5210e5b44ac7d589de4.bindPopup(popup_cbb20fef1a6344f7d4b264404b75fd59)
+        ;
+
+        
+    
+    
+            var circle_marker_dff0be13c12c7afc9c0be2668867501f = L.circleMarker(
+                [41.38330567804903, 2.1820107079154383],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff5b00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_ad3ab385c9c2b0339d7c1ec489ec3664 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d624eccf3b227f808842dc52dc7f2ac = $(`<div id="html_6d624eccf3b227f808842dc52dc7f2ac" style="width: 100.0%; height: 100.0%;"><b>Santa Maria del Mar</b><br>3.55€ (5/01/24)<br><a href="https://maps.app.goo.gl/fMLV3TvBqnaELZvH7" target="_blank">Google Maps</a></div>`)[0];
+                popup_ad3ab385c9c2b0339d7c1ec489ec3664.setContent(html_6d624eccf3b227f808842dc52dc7f2ac);
+            
+        
+
+        circle_marker_dff0be13c12c7afc9c0be2668867501f.bindPopup(popup_ad3ab385c9c2b0339d7c1ec489ec3664)
+        ;
+
+        
+    
+    
+            var circle_marker_a0077b2efda0f494c52a4391a0a59c00 = L.circleMarker(
+                [41.38475498867363, 2.1767228472593008],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffd600", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_0520ddd1cb2582261c10b77d6d99bd9b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_56c80e6c870f4d9e04eb55971772e418 = $(`<div id="html_56c80e6c870f4d9e04eb55971772e418" style="width: 100.0%; height: 100.0%;"><b>El Cafè d'en Víctor. Restaurante. Bar de tapas. Tapería.</b><br>2.75€ (5/01/24)<br><a href="https://www.google.com/maps/place/El+Caf%C3%A8+d'en+V%C3%ADctor.+Restaurante.+Bar+de+tapas.+Taper%C3%ADa./data=!4m2!3m1!19sChIJOTaum_mipBIR-75RlLusOKo" target="_blank">Google Maps</a></div>`)[0];
+                popup_0520ddd1cb2582261c10b77d6d99bd9b.setContent(html_56c80e6c870f4d9e04eb55971772e418);
+            
+        
+
+        circle_marker_a0077b2efda0f494c52a4391a0a59c00.bindPopup(popup_0520ddd1cb2582261c10b77d6d99bd9b)
+        ;
+
+        
+    
+    
+            var circle_marker_cab353c0ddeb6aecd14a120161ba231c = L.circleMarker(
+                [41.408721235651825, 2.160155934475473],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Gr\u00e0cia"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_90f4d7b987f12acc85ecc828ad0bcc86 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_169921f48c3a5a467084fb0d0c5d8c56 = $(`<div id="html_169921f48c3a5a467084fb0d0c5d8c56" style="width: 100.0%; height: 100.0%;"><b>Restaurante América</b><br>2.3€ (8/01/24)<br><a href="https://www.google.com/maps/place/Restaurante+Am%C3%A9rica/data=!4m2!3m1!19sChIJbzFygrmipBIRbQIKy_kgTb8" target="_blank">Google Maps</a></div>`)[0];
+                popup_90f4d7b987f12acc85ecc828ad0bcc86.setContent(html_169921f48c3a5a467084fb0d0c5d8c56);
+            
+        
+
+        circle_marker_cab353c0ddeb6aecd14a120161ba231c.bindPopup(popup_90f4d7b987f12acc85ecc828ad0bcc86)
+        ;
+
+        
+    
+    
+            var circle_marker_a30fe8e3e1a643cf916b40b9bacff8ef = L.circleMarker(
+                [41.38848794630618, 2.161794523169726],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffc700", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_f0c243f11ea2bd3c97cd578a22c1d23d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fa0dba2680b501999f46d539e0eaabae = $(`<div id="html_fa0dba2680b501999f46d539e0eaabae" style="width: 100.0%; height: 100.0%;"><b>4 Latas Letamendi</b><br>2.9€ (10/01/24)<br><a href="https://www.google.com/maps/place/4+Latas+Letamendi/data=!4m2!3m1!19sChIJZQQ8tr2jpBIRDVzp-DvF4Ic" target="_blank">Google Maps</a></div>`)[0];
+                popup_f0c243f11ea2bd3c97cd578a22c1d23d.setContent(html_fa0dba2680b501999f46d539e0eaabae);
+            
+        
+
+        circle_marker_a30fe8e3e1a643cf916b40b9bacff8ef.bindPopup(popup_f0c243f11ea2bd3c97cd578a22c1d23d)
+        ;
+
+        
+    
+    
+            var circle_marker_6481b1fa54744ad31c1f9eb8fcf800db = L.circleMarker(
+                [41.42408882230496, 2.175749463010626],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Horta-Guinard\u00f3"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_9d3e12e7e6211660394bf0317fbaaf4e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ba315915fb9ba7a2d92e14b1cd1b2543 = $(`<div id="html_ba315915fb9ba7a2d92e14b1cd1b2543" style="width: 100.0%; height: 100.0%;"><b>Moreno Bar Tapas</b><br>2.1€ (10/01/24)<br><a href="https://www.google.com/maps/place/Moreno+Bar+Tapas/data=!4m2!3m1!19sChIJe66PvS29pBIRJoWeMc6tTQY" target="_blank">Google Maps</a></div>`)[0];
+                popup_9d3e12e7e6211660394bf0317fbaaf4e.setContent(html_ba315915fb9ba7a2d92e14b1cd1b2543);
+            
+        
+
+        circle_marker_6481b1fa54744ad31c1f9eb8fcf800db.bindPopup(popup_9d3e12e7e6211660394bf0317fbaaf4e)
+        ;
+
+        
+    
+    
+            var circle_marker_99cbfe3110a74f11dc9ef0f57b934bd3 = L.circleMarker(
+                [41.42588476209456, 2.191816385231935],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_447b5c44a53d95071df4bcc37388694c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_46b4091d3ab71c619359a7f607d254d5 = $(`<div id="html_46b4091d3ab71c619359a7f607d254d5" style="width: 100.0%; height: 100.0%;"><b>Com a Casa</b><br>2.3€ (11/01/24)<br><a href="https://www.google.com/maps/place/Com+a+Casa/data=!4m2!3m1!19sChIJLemAiNG8pBIRB6GPnlZnawc" target="_blank">Google Maps</a></div>`)[0];
+                popup_447b5c44a53d95071df4bcc37388694c.setContent(html_46b4091d3ab71c619359a7f607d254d5);
+            
+        
+
+        circle_marker_99cbfe3110a74f11dc9ef0f57b934bd3.bindPopup(popup_447b5c44a53d95071df4bcc37388694c)
+        ;
+
+        
+    
+    
+            var circle_marker_51d52ea0f3a4483bd4e8a28aa950a51d = L.circleMarker(
+                [41.42851050021063, 2.1759701981642734],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_5ffa4d3738931d9b7d4cc0166c97bf40 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_73b01a12b7d55379be550a9d2a471f51 = $(`<div id="html_73b01a12b7d55379be550a9d2a471f51" style="width: 100.0%; height: 100.0%;"><b>Bar Restaurant Sofy</b><br>2.2€ (12/01/24)<br><a href="https://www.google.com/maps/place/Bar+Restaurant+Sofy/data=!4m2!3m1!19sChIJqfn3sy-9pBIRJ4AOs-st9qg" target="_blank">Google Maps</a></div>`)[0];
+                popup_5ffa4d3738931d9b7d4cc0166c97bf40.setContent(html_73b01a12b7d55379be550a9d2a471f51);
+            
+        
+
+        circle_marker_51d52ea0f3a4483bd4e8a28aa950a51d.bindPopup(popup_5ffa4d3738931d9b7d4cc0166c97bf40)
+        ;
+
+        
+    
+    
+            var circle_marker_9b18cc25a9f54d8cd9279f3e5af75a34 = L.circleMarker(
+                [41.372218220256784, 2.1626665014894755],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff300", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sants-Montju\u00efc"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_378d714485e3e701bf91f405f4f0db7e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_59c70a23ee19ab400777d7f8a2ac20d6 = $(`<div id="html_59c70a23ee19ab400777d7f8a2ac20d6" style="width: 100.0%; height: 100.0%;"><b>El Carro Gros</b><br>2.5€ (12/01/24)<br><a href="https://www.google.com/maps/place/El+Carro+Gros/data=!4m2!3m1!19sChIJv5oktmeipBIRuLIku760LO8" target="_blank">Google Maps</a></div>`)[0];
+                popup_378d714485e3e701bf91f405f4f0db7e.setContent(html_59c70a23ee19ab400777d7f8a2ac20d6);
+            
+        
+
+        circle_marker_9b18cc25a9f54d8cd9279f3e5af75a34.bindPopup(popup_378d714485e3e701bf91f405f4f0db7e)
+        ;
+
+        
+    
+    
+            var circle_marker_88641390911e2960440067d43b645f98 = L.circleMarker(
+                [41.383495282854, 2.1609089795655083],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff300", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_568b0f27e5acae736b3976878a4cfa27 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5a377d6d8bd1d169bfb0ea74cb783b92 = $(`<div id="html_5a377d6d8bd1d169bfb0ea74cb783b92" style="width: 100.0%; height: 100.0%;"><b>Lido</b><br>2.5€ (13/01/24)<br><a href="https://www.google.com/maps/place/Lido/data=!4m2!3m1!19sChIJRX65youipBIRBwOD4oIZ8xU" target="_blank">Google Maps</a></div>`)[0];
+                popup_568b0f27e5acae736b3976878a4cfa27.setContent(html_5a377d6d8bd1d169bfb0ea74cb783b92);
+            
+        
+
+        circle_marker_88641390911e2960440067d43b645f98.bindPopup(popup_568b0f27e5acae736b3976878a4cfa27)
+        ;
+
+        
+    
+    
+            var circle_marker_5cdff2c8b99f7b5e1d6249ec25b15a25 = L.circleMarker(
+                [41.38934760870726, 2.1578678009894148],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_acb98b97702ad0b9e510672ca7c37321 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a622d5a512a43ce01a0e2c5177e7c531 = $(`<div id="html_a622d5a512a43ce01a0e2c5177e7c531" style="width: 100.0%; height: 100.0%;"><b>Espit Chupitos</b><br>3.0€ (13/01/24)<br><a href="https://www.google.com/maps/place/Espit+Chupitos/data=!4m2!3m1!19sChIJwUaKRY6ipBIRARUS6iUPjEk" target="_blank">Google Maps</a></div>`)[0];
+                popup_acb98b97702ad0b9e510672ca7c37321.setContent(html_a622d5a512a43ce01a0e2c5177e7c531);
+            
+        
+
+        circle_marker_5cdff2c8b99f7b5e1d6249ec25b15a25.bindPopup(popup_acb98b97702ad0b9e510672ca7c37321)
+        ;
+
+        
+    
+    
+            var circle_marker_2a558c44b8a1413f30390681f38d5f8f = L.circleMarker(
+                [41.379330080396905, 2.1787408874629053],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff300", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_c86bbfc4e665e0defe0d5eef18106207 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1dcae849db6db6ca75a591d7129bbcd4 = $(`<div id="html_1dcae849db6db6ca75a591d7129bbcd4" style="width: 100.0%; height: 100.0%;"><b>Polaroid Bar</b><br>2.5€ (14/01/24)<br><a href="https://www.google.com/maps/place/Polaroid+Bar/data=!4m2!3m1!19sChIJqR1cclaipBIR0xLroXH4Pz0" target="_blank">Google Maps</a></div>`)[0];
+                popup_c86bbfc4e665e0defe0d5eef18106207.setContent(html_1dcae849db6db6ca75a591d7129bbcd4);
+            
+        
+
+        circle_marker_2a558c44b8a1413f30390681f38d5f8f.bindPopup(popup_c86bbfc4e665e0defe0d5eef18106207)
+        ;
+
+        
+    
+    
+            var circle_marker_df4378219849f3078bc2e53a16c85de0 = L.circleMarker(
+                [41.43092165925054, 2.181871205789937],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_1a96143fa3ecee234b5402ea953501e0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b54cadbbe93e805205eae6e90688820d = $(`<div id="html_b54cadbbe93e805205eae6e90688820d" style="width: 100.0%; height: 100.0%;"><b>Bar Bilbilis</b><br>2.2€ (16/01/24)<br><a href="https://www.google.com/maps/place/Bar+Bilbilis/data=!4m2!3m1!19sChIJ55at1Ce9pBIRkZa9Qj_7Czc" target="_blank">Google Maps</a></div>`)[0];
+                popup_1a96143fa3ecee234b5402ea953501e0.setContent(html_b54cadbbe93e805205eae6e90688820d);
+            
+        
+
+        circle_marker_df4378219849f3078bc2e53a16c85de0.bindPopup(popup_1a96143fa3ecee234b5402ea953501e0)
+        ;
+
+        
+    
+    
+            var circle_marker_71a7dbbd7c14d31fb559e186237696cd = L.circleMarker(
+                [41.42714576765212, 2.1743145321251838],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_7764c083f9e75a6fdaf59ded8424492f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d73efb67f270e8ab02c86fce2734b59d = $(`<div id="html_d73efb67f270e8ab02c86fce2734b59d" style="width: 100.0%; height: 100.0%;"><b>Encanto</b><br>2.2€ (20/01/24)<br><a href="https://maps.app.goo.gl/o1LNrwT1ctuFEVCfA" target="_blank">Google Maps</a></div>`)[0];
+                popup_7764c083f9e75a6fdaf59ded8424492f.setContent(html_d73efb67f270e8ab02c86fce2734b59d);
+            
+        
+
+        circle_marker_71a7dbbd7c14d31fb559e186237696cd.bindPopup(popup_7764c083f9e75a6fdaf59ded8424492f)
+        ;
+
+        
+    
+    
+            var circle_marker_7d87105733c2c4ad703fdb800c78b430 = L.circleMarker(
+                [41.43049711808951, 2.1710518834040227],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91c800", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_668ebada49848561a0ebf40951239f37 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_91a804a49da64f1a59e61b1c38a7fc24 = $(`<div id="html_91a804a49da64f1a59e61b1c38a7fc24" style="width: 100.0%; height: 100.0%;"><b>Frankfurt Iberic</b><br>2.05€ (20/01/24)<br><a href="https://maps.app.goo.gl/mYPiKcr2DxtirbS19" target="_blank">Google Maps</a></div>`)[0];
+                popup_668ebada49848561a0ebf40951239f37.setContent(html_91a804a49da64f1a59e61b1c38a7fc24);
+            
+        
+
+        circle_marker_7d87105733c2c4ad703fdb800c78b430.bindPopup(popup_668ebada49848561a0ebf40951239f37)
+        ;
+
+        
+    
+    
+            var circle_marker_1ae9d6729ec5375d2514f5ecb6096726 = L.circleMarker(
+                [41.38985151341556, 2.163829585587909],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_35184a2102b70deadc788e083049d1bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ae134f40a89def082046bbf431d70f3d = $(`<div id="html_ae134f40a89def082046bbf431d70f3d" style="width: 100.0%; height: 100.0%;"><b>Lateral Consell de Cent</b><br>4.0€ (23/01/24)<br><a href="https://maps.app.goo.gl/RrKoN5kRGzaQhrRq7" target="_blank">Google Maps</a></div>`)[0];
+                popup_35184a2102b70deadc788e083049d1bf.setContent(html_ae134f40a89def082046bbf431d70f3d);
+            
+        
+
+        circle_marker_1ae9d6729ec5375d2514f5ecb6096726.bindPopup(popup_35184a2102b70deadc788e083049d1bf)
+        ;
+
+        
+    
+    
+            var circle_marker_705e357f993fe9e92aa777f3dca354cc = L.circleMarker(
+                [41.431354585682506, 2.1810001367905953],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_594d78c55d4b46a5aae87c7434815f54 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34d263005ae6b61594b2e933a45b3079 = $(`<div id="html_34d263005ae6b61594b2e933a45b3079" style="width: 100.0%; height: 100.0%;"><b>Al Teu Gust</b><br>2.2€ (23/01/24)<br><a href="https://maps.app.goo.gl/cpHyqMTriFMrFMcd8" target="_blank">Google Maps</a></div>`)[0];
+                popup_594d78c55d4b46a5aae87c7434815f54.setContent(html_34d263005ae6b61594b2e933a45b3079);
+            
+        
+
+        circle_marker_705e357f993fe9e92aa777f3dca354cc.bindPopup(popup_594d78c55d4b46a5aae87c7434815f54)
+        ;
+
+        
+    
+    
+            var circle_marker_f6af11f6dfa31609e764c63c9c437281 = L.circleMarker(
+                [41.40494150771099, 2.1569772583484954],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7b00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Gr\u00e0cia"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_bb897ffb42a33de5d98d6332c55d745e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_76f456c0f106c6fec6079d03143772d1 = $(`<div id="html_76f456c0f106c6fec6079d03143772d1" style="width: 100.0%; height: 100.0%;"><b>Terra Bar S C P</b><br>3.4€ (25/01/24)<br><a href="https://maps.app.goo.gl/a7VWNYNJfe6MRNfz8" target="_blank">Google Maps</a></div>`)[0];
+                popup_bb897ffb42a33de5d98d6332c55d745e.setContent(html_76f456c0f106c6fec6079d03143772d1);
+            
+        
+
+        circle_marker_f6af11f6dfa31609e764c63c9c437281.bindPopup(popup_bb897ffb42a33de5d98d6332c55d745e)
+        ;
+
+        
+    
+    
+            var circle_marker_4c4b92e65aa254a6500e17755cf2ec78 = L.circleMarker(
+                [41.40125943479774, 2.2012318089568828],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe800", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_4d471ecdd3ca8c13bd8abb054f882db8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a335598af39396f177feb41626e30b2c = $(`<div id="html_a335598af39396f177feb41626e30b2c" style="width: 100.0%; height: 100.0%;"><b>Monopol</b><br>2.6€ (26/01/24)<br><a href="https://maps.app.goo.gl/WNN991mTibXUj6rv6" target="_blank">Google Maps</a></div>`)[0];
+                popup_4d471ecdd3ca8c13bd8abb054f882db8.setContent(html_a335598af39396f177feb41626e30b2c);
+            
+        
+
+        circle_marker_4c4b92e65aa254a6500e17755cf2ec78.bindPopup(popup_4d471ecdd3ca8c13bd8abb054f882db8)
+        ;
+
+        
+    
+    
+            var circle_marker_0bf7b1cbbe76a908c4351e9a2c9688ba = L.circleMarker(
+                [41.386984398528234, 2.180284215136492],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6400", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_4f7655b6530be1e6496a9c2306ffd3c8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5ba285db5cdbbd852684ae60df2cf2f4 = $(`<div id="html_5ba285db5cdbbd852684ae60df2cf2f4" style="width: 100.0%; height: 100.0%;"><b>Space Cowboy</b><br>3.5€ (26/01/24)<br><a href="https://maps.app.goo.gl/siYjVnHqZqp7sjn68" target="_blank">Google Maps</a></div>`)[0];
+                popup_4f7655b6530be1e6496a9c2306ffd3c8.setContent(html_5ba285db5cdbbd852684ae60df2cf2f4);
+            
+        
+
+        circle_marker_0bf7b1cbbe76a908c4351e9a2c9688ba.bindPopup(popup_4f7655b6530be1e6496a9c2306ffd3c8)
+        ;
+
+        
+    
+    
+            var circle_marker_bc9e9f597ebb5aac8c182a2c0364891a = L.circleMarker(
+                [41.38365344910685, 2.1788453978382685],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_0239dfa4c4b8cfc24ff0d5f0d882c9b0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4211306e819702e7366f0947a7cb98cd = $(`<div id="html_4211306e819702e7366f0947a7cb98cd" style="width: 100.0%; height: 100.0%;"><b>Dunne's Irish Bar and Restaurant</b><br>3.0€ (27/01/24)<br><a href="https://maps.app.goo.gl/vqQaFdrjVAVkExue6" target="_blank">Google Maps</a></div>`)[0];
+                popup_0239dfa4c4b8cfc24ff0d5f0d882c9b0.setContent(html_4211306e819702e7366f0947a7cb98cd);
+            
+        
+
+        circle_marker_bc9e9f597ebb5aac8c182a2c0364891a.bindPopup(popup_0239dfa4c4b8cfc24ff0d5f0d882c9b0)
+        ;
+
+        
+    
+    
+            var circle_marker_d6077724ac96b2b69fef469240a875c2 = L.circleMarker(
+                [41.37550241585035, 2.15864437833145],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_abdeb031765d5bef55633a37f3a185b7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3e86e023e7abbd875a05c8cabc2ed7ea = $(`<div id="html_3e86e023e7abbd875a05c8cabc2ed7ea" style="width: 100.0%; height: 100.0%;"><b>V de Vermut</b><br>3.0€ (28/01/24)<br><a href="https://maps.app.goo.gl/88AY4sNzZERAKCD19" target="_blank">Google Maps</a></div>`)[0];
+                popup_abdeb031765d5bef55633a37f3a185b7.setContent(html_3e86e023e7abbd875a05c8cabc2ed7ea);
+            
+        
+
+        circle_marker_d6077724ac96b2b69fef469240a875c2.bindPopup(popup_abdeb031765d5bef55633a37f3a185b7)
+        ;
+
+        
+    
+    
+            var circle_marker_312a5f1e9580314ab170290d0c78d602 = L.circleMarker(
+                [41.43016642909363, 2.1760456352311257],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_56409a547129a0605f7ff0a90904379d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b885eb6154ba8d41f888ea3a56e32b3a = $(`<div id="html_b885eb6154ba8d41f888ea3a56e32b3a" style="width: 100.0%; height: 100.0%;"><b>İstanbul parrilla</b><br>2.2€ (29/01/24)<br><a href="https://maps.app.goo.gl/ZK1XXYFSvdbawZK56" target="_blank">Google Maps</a></div>`)[0];
+                popup_56409a547129a0605f7ff0a90904379d.setContent(html_b885eb6154ba8d41f888ea3a56e32b3a);
+            
+        
+
+        circle_marker_312a5f1e9580314ab170290d0c78d602.bindPopup(popup_56409a547129a0605f7ff0a90904379d)
+        ;
+
+        
+    
+    
+            var circle_marker_2e4abbdbe46b0cef42bbdf9265fa252f = L.circleMarker(
+                [41.43031962685466, 2.1864179976759495],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe800", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_b699b7ca91764dbbc81b8d425d9fcf3b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ae4e082cf1f0e6af29547c68cc4dab8 = $(`<div id="html_8ae4e082cf1f0e6af29547c68cc4dab8" style="width: 100.0%; height: 100.0%;"><b>Livingstone</b><br>2.6€ (30/01/24)<br><a href="https://maps.app.goo.gl/wnNfwoShx3fyqbef9" target="_blank">Google Maps</a></div>`)[0];
+                popup_b699b7ca91764dbbc81b8d425d9fcf3b.setContent(html_8ae4e082cf1f0e6af29547c68cc4dab8);
+            
+        
+
+        circle_marker_2e4abbdbe46b0cef42bbdf9265fa252f.bindPopup(popup_b699b7ca91764dbbc81b8d425d9fcf3b)
+        ;
+
+        
+    
+    
+            var circle_marker_eefaa0be9884a463dc85103412b65e4b = L.circleMarker(
+                [41.411234085031076, 2.217577353829852],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_8fbbc5f8d4762fac71f861b822684258 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_50cf6591258630c99ba734563ade36f3 = $(`<div id="html_50cf6591258630c99ba734563ade36f3" style="width: 100.0%; height: 100.0%;"><b>Bar Estrella</b><br>2.2€ (31/01/24)<br><a href="https://maps.app.goo.gl/gUmkB8kjVKup65aR6" target="_blank">Google Maps</a></div>`)[0];
+                popup_8fbbc5f8d4762fac71f861b822684258.setContent(html_50cf6591258630c99ba734563ade36f3);
+            
+        
+
+        circle_marker_eefaa0be9884a463dc85103412b65e4b.bindPopup(popup_8fbbc5f8d4762fac71f861b822684258)
+        ;
+
+        
+    
+    
+            var circle_marker_57a3ad5264c1e2b48e969747052c0074 = L.circleMarker(
+                [41.430295829794495, 2.186486845194863],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_74d856dd7802993e690f44ad35156346 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_855c6316d1c57193c721b6a4bb2f0e76 = $(`<div id="html_855c6316d1c57193c721b6a4bb2f0e76" style="width: 100.0%; height: 100.0%;"><b>Ïbar</b><br>2.0€ (2/02/24)<br><a href="https://maps.app.goo.gl/upPDU992fgpcmp3n6" target="_blank">Google Maps</a></div>`)[0];
+                popup_74d856dd7802993e690f44ad35156346.setContent(html_855c6316d1c57193c721b6a4bb2f0e76);
+            
+        
+
+        circle_marker_57a3ad5264c1e2b48e969747052c0074.bindPopup(popup_74d856dd7802993e690f44ad35156346)
+        ;
+
+        
+    
+    
+            var circle_marker_a6507dd97c78759f6b6a2b8c4242b659 = L.circleMarker(
+                [41.432031875538236, 2.1834996627737056],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_831260b4eb49d7603f83313e7ff28c66 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd7318e93791fefdc19c15399c1a8c76 = $(`<div id="html_fd7318e93791fefdc19c15399c1a8c76" style="width: 100.0%; height: 100.0%;"><b>Cerveseria El Racó De Sant Andreu</b><br>2.1€ (2/02/24)<br><a href="https://maps.app.goo.gl/QanWxykNtTYcTvhB8" target="_blank">Google Maps</a></div>`)[0];
+                popup_831260b4eb49d7603f83313e7ff28c66.setContent(html_fd7318e93791fefdc19c15399c1a8c76);
+            
+        
+
+        circle_marker_a6507dd97c78759f6b6a2b8c4242b659.bindPopup(popup_831260b4eb49d7603f83313e7ff28c66)
+        ;
+
+        
+    
+    
+            var circle_marker_7a03afe74c6aebdf4b85c9426547b11d = L.circleMarker(
+                [41.42911214722657, 2.175258458532866],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_fee508904198a90427f4ce2eec25aa3c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_262262a52464354e3b07d905099f6f64 = $(`<div id="html_262262a52464354e3b07d905099f6f64" style="width: 100.0%; height: 100.0%;"><b>Bar Taberneta</b><br>2.2€ (3/02/24)<br><a href="https://maps.app.goo.gl/QanWxykNtTYcTvhB8" target="_blank">Google Maps</a></div>`)[0];
+                popup_fee508904198a90427f4ce2eec25aa3c.setContent(html_262262a52464354e3b07d905099f6f64);
+            
+        
+
+        circle_marker_7a03afe74c6aebdf4b85c9426547b11d.bindPopup(popup_fee508904198a90427f4ce2eec25aa3c)
+        ;
+
+        
+    
+    
+            var circle_marker_181c7dfc097c04fb295a7beb5e512ba5 = L.circleMarker(
+                [41.43028819175985, 2.18534966577336],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fffa00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_3870fd5e840dffefbba3a327dbe79bb6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b4ce94857b1bb7cfb5a78e44a099a61e = $(`<div id="html_b4ce94857b1bb7cfb5a78e44a099a61e" style="width: 100.0%; height: 100.0%;"><b>Bar Restaurante La Pubilla</b><br>2.45€ (4/02/24)<br><a href="https://maps.app.goo.gl/aUgzCUVmxyuqR7ux8" target="_blank">Google Maps</a></div>`)[0];
+                popup_3870fd5e840dffefbba3a327dbe79bb6.setContent(html_b4ce94857b1bb7cfb5a78e44a099a61e);
+            
+        
+
+        circle_marker_181c7dfc097c04fb295a7beb5e512ba5.bindPopup(popup_3870fd5e840dffefbba3a327dbe79bb6)
+        ;
+
+        
+    
+    
+            var circle_marker_c69be806d590ba81c3b98510e69ee0ef = L.circleMarker(
+                [41.4237674, 2.1883707],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_3f63764659293f0d2b3749c52fc117ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4148471e2ea24a3cba34d784e03a08e0 = $(`<div id="html_4148471e2ea24a3cba34d784e03a08e0" style="width: 100.0%; height: 100.0%;"><b>Granja Sant Jordi</b><br>2.1€ (5/02/24)<br><a href="https://maps.app.goo.gl/M7wKhjwrHd7N9pug9" target="_blank">Google Maps</a></div>`)[0];
+                popup_3f63764659293f0d2b3749c52fc117ef.setContent(html_4148471e2ea24a3cba34d784e03a08e0);
+            
+        
+
+        circle_marker_c69be806d590ba81c3b98510e69ee0ef.bindPopup(popup_3f63764659293f0d2b3749c52fc117ef)
+        ;
+
+        
+    
+    
+            var circle_marker_3892278f97cb72b9c365ed99176dc0ba = L.circleMarker(
+                [41.43977197266024, 2.175531445891712],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_bfa120c63525df1ef9cfd2187fc6cbf6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5aaa84c6aacf396c825ff87c949ba312 = $(`<div id="html_5aaa84c6aacf396c825ff87c949ba312" style="width: 100.0%; height: 100.0%;"><b>Dragón Via Julia</b><br>2.3€ (9/02/24)<br><a href="https://maps.app.goo.gl/x7f64iUk8oPKj1Xu7" target="_blank">Google Maps</a></div>`)[0];
+                popup_bfa120c63525df1ef9cfd2187fc6cbf6.setContent(html_5aaa84c6aacf396c825ff87c949ba312);
+            
+        
+
+        circle_marker_3892278f97cb72b9c365ed99176dc0ba.bindPopup(popup_bfa120c63525df1ef9cfd2187fc6cbf6)
+        ;
+
+        
+    
+    
+            var circle_marker_bbae183bb1999d4cd72ba6914b583aef = L.circleMarker(
+                [41.380779742533285, 2.1613385807082697],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_3cbfb30e7e317e0aa4665a88c7af27d2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e8591290ae71a7f1d9a120727d2d6678 = $(`<div id="html_e8591290ae71a7f1d9a120727d2d6678" style="width: 100.0%; height: 100.0%;"><b>Tarea Fina</b><br>2.2€ (12/02/24)<br><a href="https://maps.app.goo.gl/pKvQqrEtdm81PgJ36" target="_blank">Google Maps</a></div>`)[0];
+                popup_3cbfb30e7e317e0aa4665a88c7af27d2.setContent(html_e8591290ae71a7f1d9a120727d2d6678);
+            
+        
+
+        circle_marker_bbae183bb1999d4cd72ba6914b583aef.bindPopup(popup_3cbfb30e7e317e0aa4665a88c7af27d2)
+        ;
+
+        
+    
+    
+            var circle_marker_7a021234fea42f0db2bb54f0ba6d7be1 = L.circleMarker(
+                [41.42323817724328, 2.1872569864284883],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_c993db2eb0e79f8d0cba23ecdd984438 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_de6fbe3e5c355f4c7db7eb574a11a7e2 = $(`<div id="html_de6fbe3e5c355f4c7db7eb574a11a7e2" style="width: 100.0%; height: 100.0%;"><b>El rincón de los amigos</b><br>2.2€ (13/02/24)<br><a href="https://maps.app.goo.gl/MdJyVN29c9wfmDDz7" target="_blank">Google Maps</a></div>`)[0];
+                popup_c993db2eb0e79f8d0cba23ecdd984438.setContent(html_de6fbe3e5c355f4c7db7eb574a11a7e2);
+            
+        
+
+        circle_marker_7a021234fea42f0db2bb54f0ba6d7be1.bindPopup(popup_c993db2eb0e79f8d0cba23ecdd984438)
+        ;
+
+        
+    
+    
+            var circle_marker_871692170f42ba8bfb3b356128cf3bb1 = L.circleMarker(
+                [41.42013332767205, 2.180174830679414],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Horta-Guinard\u00f3"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_a6be215cac6beb1a67d1bacf6851f682 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f808f6c5f271ed42668f3d6085d1b657 = $(`<div id="html_f808f6c5f271ed42668f3d6085d1b657" style="width: 100.0%; height: 100.0%;"><b>El Racó de l'Opa</b><br>2.0€ (13/02/24)<br><a href="https://maps.app.goo.gl/3hoEhtgqRSmfdBLT9" target="_blank">Google Maps</a></div>`)[0];
+                popup_a6be215cac6beb1a67d1bacf6851f682.setContent(html_f808f6c5f271ed42668f3d6085d1b657);
+            
+        
+
+        circle_marker_871692170f42ba8bfb3b356128cf3bb1.bindPopup(popup_a6be215cac6beb1a67d1bacf6851f682)
+        ;
+
+        
+    
+    
+            var circle_marker_4b309444c5e6007974849b0c7934fa71 = L.circleMarker(
+                [41.387090343369955, 2.1586013664013137],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_7f33b684523c7138c0e6aa0bba4427b7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a56a5eb7a2b8e71435f55ae34fb45627 = $(`<div id="html_a56a5eb7a2b8e71435f55ae34fb45627" style="width: 100.0%; height: 100.0%;"><b>El Raïm</b><br>2.3€ (14/02/24)<br><a href="https://maps.app.goo.gl/ps42azw5RZh61poh6" target="_blank">Google Maps</a></div>`)[0];
+                popup_7f33b684523c7138c0e6aa0bba4427b7.setContent(html_a56a5eb7a2b8e71435f55ae34fb45627);
+            
+        
+
+        circle_marker_4b309444c5e6007974849b0c7934fa71.bindPopup(popup_7f33b684523c7138c0e6aa0bba4427b7)
+        ;
+
+        
+    
+    
+            var circle_marker_cc9b74ef0342e64d84fb508e90bfd398 = L.circleMarker(
+                [41.401764760051606, 2.156990036367222],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffc100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Gr\u00e0cia"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_d724e62beaa99be96e5714538669c29c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0f8d3f894b2381ee0a4254e2b16f83b5 = $(`<div id="html_0f8d3f894b2381ee0a4254e2b16f83b5" style="width: 100.0%; height: 100.0%;"><b>Woody Bar</b><br>2.95€ (14/02/24)<br><a href="https://maps.app.goo.gl/51NpTRZysCuYf1sD8" target="_blank">Google Maps</a></div>`)[0];
+                popup_d724e62beaa99be96e5714538669c29c.setContent(html_0f8d3f894b2381ee0a4254e2b16f83b5);
+            
+        
+
+        circle_marker_cc9b74ef0342e64d84fb508e90bfd398.bindPopup(popup_d724e62beaa99be96e5714538669c29c)
+        ;
+
+        
+    
+    
+            var circle_marker_58509acd2751ca41cd5f9fcdf3e06068 = L.circleMarker(
+                [41.374771049203524, 2.164162153061724],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sants-Montju\u00efc"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_175da94d584b333ab7d78a9db9407a72 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41d4b64ba22fcc28353d5501ff5da6ab = $(`<div id="html_41d4b64ba22fcc28353d5501ff5da6ab" style="width: 100.0%; height: 100.0%;"><b>Frankfurt Can Eusebio</b><br>3.0€ (17/02/24)<br><a href="https://maps.app.goo.gl/iw8KdMKKXi3kXpBaA" target="_blank">Google Maps</a></div>`)[0];
+                popup_175da94d584b333ab7d78a9db9407a72.setContent(html_41d4b64ba22fcc28353d5501ff5da6ab);
+            
+        
+
+        circle_marker_58509acd2751ca41cd5f9fcdf3e06068.bindPopup(popup_175da94d584b333ab7d78a9db9407a72)
+        ;
+
+        
+    
+    
+            var circle_marker_9b52a45341a7b3420b2bdd19b5715adb = L.circleMarker(
+                [41.408518873849374, 2.174510307534942],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_9c23fd494f0fb032f207a2216fb2db6e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_97241ef895ca5bedc88f812e22fd7b75 = $(`<div id="html_97241ef895ca5bedc88f812e22fd7b75" style="width: 100.0%; height: 100.0%;"><b>Sagradas Tapas</b><br>2.4€ (18/02/24)<br><a href="https://maps.app.goo.gl/5tgoX3dsGfYWFhyN7" target="_blank">Google Maps</a></div>`)[0];
+                popup_9c23fd494f0fb032f207a2216fb2db6e.setContent(html_97241ef895ca5bedc88f812e22fd7b75);
+            
+        
+
+        circle_marker_9b52a45341a7b3420b2bdd19b5715adb.bindPopup(popup_9c23fd494f0fb032f207a2216fb2db6e)
+        ;
+
+        
+    
+    
+            var circle_marker_cb718f2d24177c5fcf86338bd37a460f = L.circleMarker(
+                [41.40473407848793, 2.173974113472083],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_79dced8aaec68f60f532090608653b3b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b826ca98976c940060f7126277db5d62 = $(`<div id="html_b826ca98976c940060f7126277db5d62" style="width: 100.0%; height: 100.0%;"><b>Bar Gerveseria</b><br>2.4€ (23/02/24)<br><a href="https://maps.app.goo.gl/Db38KmuK59AmQpJp6" target="_blank">Google Maps</a></div>`)[0];
+                popup_79dced8aaec68f60f532090608653b3b.setContent(html_b826ca98976c940060f7126277db5d62);
+            
+        
+
+        circle_marker_cb718f2d24177c5fcf86338bd37a460f.bindPopup(popup_79dced8aaec68f60f532090608653b3b)
+        ;
+
+        
+    
+    
+            var circle_marker_cdf2e19507ce441fa069e29c5dab77d2 = L.circleMarker(
+                [41.37504796747977, 2.147203743603055],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sants-Montju\u00efc"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_144fafaf50f36f6ec180595209e8cdb0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9343dc951a4b90de461a9be83cb77e6b = $(`<div id="html_9343dc951a4b90de461a9be83cb77e6b" style="width: 100.0%; height: 100.0%;"><b>Frankfurt Station</b><br>2.4€ (24/02/24)<br><a href="https://maps.app.goo.gl/vtkFkVo34uUK47Gp8" target="_blank">Google Maps</a></div>`)[0];
+                popup_144fafaf50f36f6ec180595209e8cdb0.setContent(html_9343dc951a4b90de461a9be83cb77e6b);
+            
+        
+
+        circle_marker_cdf2e19507ce441fa069e29c5dab77d2.bindPopup(popup_144fafaf50f36f6ec180595209e8cdb0)
+        ;
+
+        
+    
+    
+            var circle_marker_6b5860737f6172b1470777b7c9d1fbdc = L.circleMarker(
+                [41.377616025714566, 2.153046846358869],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_502e0e9427b0bafdc9afb08a788187b1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a81273e6c1045ba010bb82cddc73db04 = $(`<div id="html_a81273e6c1045ba010bb82cddc73db04" style="width: 100.0%; height: 100.0%;"><b>Clau Bar Cafeteria</b><br>2.1€ (24/02/24)<br><a href="https://maps.app.goo.gl/ojs7Rzs842jrY8aC8" target="_blank">Google Maps</a></div>`)[0];
+                popup_502e0e9427b0bafdc9afb08a788187b1.setContent(html_a81273e6c1045ba010bb82cddc73db04);
+            
+        
+
+        circle_marker_6b5860737f6172b1470777b7c9d1fbdc.bindPopup(popup_502e0e9427b0bafdc9afb08a788187b1)
+        ;
+
+        
+    
+    
+            var circle_marker_1dccc7e002952410bec291fa7ab3fbe7 = L.circleMarker(
+                [41.40557637412023, 2.1749850418989842],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_d1d9ebd3c42e7ce46c20cad911d67161 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7e8462a97656d559532033375a6e6868 = $(`<div id="html_7e8462a97656d559532033375a6e6868" style="width: 100.0%; height: 100.0%;"><b>Bar Restaurante Lepanto</b><br>2.2€ (25/02/24)<br><a href="https://maps.app.goo.gl/p5nhcx9m5dsZCfod8" target="_blank">Google Maps</a></div>`)[0];
+                popup_d1d9ebd3c42e7ce46c20cad911d67161.setContent(html_7e8462a97656d559532033375a6e6868);
+            
+        
+
+        circle_marker_1dccc7e002952410bec291fa7ab3fbe7.bindPopup(popup_d1d9ebd3c42e7ce46c20cad911d67161)
+        ;
+
+        
+    
+    
+            var circle_marker_6031a9939f5b67e0c0b08618b472baff = L.circleMarker(
+                [41.42978856640363, 2.1818249111360744],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_5a413bfbcecfdd7ec38b50500d780c06 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5a54c8db2347d2cce3dc25f56fc45524 = $(`<div id="html_5a54c8db2347d2cce3dc25f56fc45524" style="width: 100.0%; height: 100.0%;"><b>Bar Ibles</b><br>2.0€ (1/03/24)<br><a href="https://maps.app.goo.gl/dSPuC9W4BLEWZbrdA" target="_blank">Google Maps</a></div>`)[0];
+                popup_5a413bfbcecfdd7ec38b50500d780c06.setContent(html_5a54c8db2347d2cce3dc25f56fc45524);
+            
+        
+
+        circle_marker_6031a9939f5b67e0c0b08618b472baff.bindPopup(popup_5a413bfbcecfdd7ec38b50500d780c06)
+        ;
+
+        
+    
+    
+            var circle_marker_b91dae9ef291148487c1b3c359c40004 = L.circleMarker(
+                [41.400517187583006, 2.1904095387753277],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_7087e5194a128fe22c7a7a1151780680 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_67479387dae032977c2471c17f3137cd = $(`<div id="html_67479387dae032977c2471c17f3137cd" style="width: 100.0%; height: 100.0%;"><b>Diamàntic</b><br>2.3€ (5/03/24)<br><a href="https://maps.app.goo.gl/eC4vg5uVvaZrKiVK7" target="_blank">Google Maps</a></div>`)[0];
+                popup_7087e5194a128fe22c7a7a1151780680.setContent(html_67479387dae032977c2471c17f3137cd);
+            
+        
+
+        circle_marker_b91dae9ef291148487c1b3c359c40004.bindPopup(popup_7087e5194a128fe22c7a7a1151780680)
+        ;
+
+        
+    
+    
+            var circle_marker_8b15d7915353cd859bbd51ea41bec0e2 = L.circleMarker(
+                [41.421616295954735, 2.1873861272895754],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_46a72cd2af6290f9fd3bf5698a0f7a61 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_617e060af01543724c43ac43c76c8b57 = $(`<div id="html_617e060af01543724c43ac43c76c8b57" style="width: 100.0%; height: 100.0%;"><b>CRIPTOCAFÉ BAR</b><br>2.2€ (6/03/24)<br><a href="https://maps.app.goo.gl/26vn5b6ijTk97waWA" target="_blank">Google Maps</a></div>`)[0];
+                popup_46a72cd2af6290f9fd3bf5698a0f7a61.setContent(html_617e060af01543724c43ac43c76c8b57);
+            
+        
+
+        circle_marker_8b15d7915353cd859bbd51ea41bec0e2.bindPopup(popup_46a72cd2af6290f9fd3bf5698a0f7a61)
+        ;
+
+        
+    
+    
+            var circle_marker_7d4fded4c36a6abce31b7d041fee3f01 = L.circleMarker(
+                [41.41986367340667, 2.183487020989466],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_d967d64e5118574c15997cff72334cd6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4596471af6861653324d1a8ef73cc5af = $(`<div id="html_4596471af6861653324d1a8ef73cc5af" style="width: 100.0%; height: 100.0%;"><b>Bellmore</b><br>2.2€ (7/03/24)<br><a href="https://maps.app.goo.gl/r6a42FmnYdqbnJKu5" target="_blank">Google Maps</a></div>`)[0];
+                popup_d967d64e5118574c15997cff72334cd6.setContent(html_4596471af6861653324d1a8ef73cc5af);
+            
+        
+
+        circle_marker_7d4fded4c36a6abce31b7d041fee3f01.bindPopup(popup_d967d64e5118574c15997cff72334cd6)
+        ;
+
+        
+    
+    
+            var circle_marker_b7c08bf41a848946d11fa0010fc7befb = L.circleMarker(
+                [41.38784534222763, 2.15127459149067],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_2083d34a880c83f336138f1ece391595 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10e735df6823c564940f53e0709c652d = $(`<div id="html_10e735df6823c564940f53e0709c652d" style="width: 100.0%; height: 100.0%;"><b>Rocktail</b><br>2.2€ (8/03/24)<br><a href="https://maps.app.goo.gl/PRS5E31xBJukLkes8" target="_blank">Google Maps</a></div>`)[0];
+                popup_2083d34a880c83f336138f1ece391595.setContent(html_10e735df6823c564940f53e0709c652d);
+            
+        
+
+        circle_marker_b7c08bf41a848946d11fa0010fc7befb.bindPopup(popup_2083d34a880c83f336138f1ece391595)
+        ;
+
+        
+    
+    
+            var circle_marker_b3f91eb8745922410d80c5fd65e34a84 = L.circleMarker(
+                [41.38543795706633, 2.178607359063933],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_7c62dc2dfc41a0b7e7d74838ca4958f2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_45b37e85a5a69d4a55e313b2597e4ced = $(`<div id="html_45b37e85a5a69d4a55e313b2597e4ced" style="width: 100.0%; height: 100.0%;"><b>Lupara</b><br>3.0€ (9/03/24)<br><a href="https://maps.app.goo.gl/KpcF43qXWzoFVTMU9" target="_blank">Google Maps</a></div>`)[0];
+                popup_7c62dc2dfc41a0b7e7d74838ca4958f2.setContent(html_45b37e85a5a69d4a55e313b2597e4ced);
+            
+        
+
+        circle_marker_b3f91eb8745922410d80c5fd65e34a84.bindPopup(popup_7c62dc2dfc41a0b7e7d74838ca4958f2)
+        ;
+
+        
+    
+    
+            var circle_marker_b1412c5d994eb8319ddd9938e1ee2e72 = L.circleMarker(
+                [41.421508467377166, 2.187547550415945],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_558997e3f996df760cd97f861f923867 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f48efb355fc44cdf53b14f016209553f = $(`<div id="html_f48efb355fc44cdf53b14f016209553f" style="width: 100.0%; height: 100.0%;"><b>Cervecería Nuñez</b><br>2.1€ (20/03/24)<br><a href="https://maps.app.goo.gl/DrsmJjpnjsXag4Sw8" target="_blank">Google Maps</a></div>`)[0];
+                popup_558997e3f996df760cd97f861f923867.setContent(html_f48efb355fc44cdf53b14f016209553f);
+            
+        
+
+        circle_marker_b1412c5d994eb8319ddd9938e1ee2e72.bindPopup(popup_558997e3f996df760cd97f861f923867)
+        ;
+
+        
+    
+    
+            var circle_marker_89dc135312dc0a33cbeb40481dc8b7c7 = L.circleMarker(
+                [41.40741349600727, 2.1856139583689926],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_116a3b41b168080f69b11366e5074f6e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9e7f797df23284b6dbdc9e429fb2af30 = $(`<div id="html_9e7f797df23284b6dbdc9e429fb2af30" style="width: 100.0%; height: 100.0%;"><b>Bar 1978</b><br>2.0€ (22/03/24)<br><a href="https://maps.app.goo.gl/B4kfj5XnyzcTkSB87" target="_blank">Google Maps</a></div>`)[0];
+                popup_116a3b41b168080f69b11366e5074f6e.setContent(html_9e7f797df23284b6dbdc9e429fb2af30);
+            
+        
+
+        circle_marker_89dc135312dc0a33cbeb40481dc8b7c7.bindPopup(popup_116a3b41b168080f69b11366e5074f6e)
+        ;
+
+        
+    
+    
+            var circle_marker_095ab4da9af46f8ef61d463b1aa24e69 = L.circleMarker(
+                [41.41087407456048, 2.189314861828827],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_89098eac22ef96cfcdd2b6bf2c04ff5b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_49226750e8912dc51bb0c8631dcd3949 = $(`<div id="html_49226750e8912dc51bb0c8631dcd3949" style="width: 100.0%; height: 100.0%;"><b>Restaurante Sol Naciente II</b><br>2.2€ (22/03/24)<br><a href="https://maps.app.goo.gl/GdXq64QL8dtkqY4s6" target="_blank">Google Maps</a></div>`)[0];
+                popup_89098eac22ef96cfcdd2b6bf2c04ff5b.setContent(html_49226750e8912dc51bb0c8631dcd3949);
+            
+        
+
+        circle_marker_095ab4da9af46f8ef61d463b1aa24e69.bindPopup(popup_89098eac22ef96cfcdd2b6bf2c04ff5b)
+        ;
+
+        
+    
+    
+            var circle_marker_9b002806ec140103042ea0b2bfdff5f1 = L.circleMarker(
+                [41.38128389549683, 2.163645042476203],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffc100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_ceec6643a0b6ba676042711c0a6b67d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d0a3ffa2f002602dcb01bfda4a9b4c8 = $(`<div id="html_6d0a3ffa2f002602dcb01bfda4a9b4c8" style="width: 100.0%; height: 100.0%;"><b>Bracafè Sant Antoni</b><br>2.95€ (29/03/24)<br><a href="https://maps.app.goo.gl/y6oS3ZVFjVfcjUCPA" target="_blank">Google Maps</a></div>`)[0];
+                popup_ceec6643a0b6ba676042711c0a6b67d1.setContent(html_6d0a3ffa2f002602dcb01bfda4a9b4c8);
+            
+        
+
+        circle_marker_9b002806ec140103042ea0b2bfdff5f1.bindPopup(popup_ceec6643a0b6ba676042711c0a6b67d1)
+        ;
+
+        
+    
+    
+            var circle_marker_63478548c7c4d87ae52411c54e81167f = L.circleMarker(
+                [41.38557956417174, 2.161027740473712],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6400", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_0d12b10b241ba4c4073383a4e157e740 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c1e9b0f0937cdc7d9f6351823757ab93 = $(`<div id="html_c1e9b0f0937cdc7d9f6351823757ab93" style="width: 100.0%; height: 100.0%;"><b>Titanic Barcelona</b><br>3.5€ (29/03/24)<br><a href="https://maps.app.goo.gl/zKkdXy7HUHNBaqkG7" target="_blank">Google Maps</a></div>`)[0];
+                popup_0d12b10b241ba4c4073383a4e157e740.setContent(html_c1e9b0f0937cdc7d9f6351823757ab93);
+            
+        
+
+        circle_marker_63478548c7c4d87ae52411c54e81167f.bindPopup(popup_0d12b10b241ba4c4073383a4e157e740)
+        ;
+
+        
+    
+    
+            var circle_marker_dfa1241b928b36ba031fe5d092d1fbb9 = L.circleMarker(
+                [41.38632984327765, 2.1661181578155615],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6400", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_85d5248932a6f649340fb77fe12d6873 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_39b4c11aa4ae315e60a52146c5b511d0 = $(`<div id="html_39b4c11aa4ae315e60a52146c5b511d0" style="width: 100.0%; height: 100.0%;"><b>Scobies Irish Pub</b><br>3.5€ (1/04/24)<br><a href="https://maps.app.goo.gl/rk5DdCGQLYyprYTC9" target="_blank">Google Maps</a></div>`)[0];
+                popup_85d5248932a6f649340fb77fe12d6873.setContent(html_39b4c11aa4ae315e60a52146c5b511d0);
+            
+        
+
+        circle_marker_dfa1241b928b36ba031fe5d092d1fbb9.bindPopup(popup_85d5248932a6f649340fb77fe12d6873)
+        ;
+
+        
+    
+    
+            var circle_marker_bea622b7925f7ef1291ae569cb06b5a5 = L.circleMarker(
+                [41.408006945571806, 2.188772660999988],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff300", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_9aaa74631518a61a63884dc7c56480e0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4e9a1f342d1fc7065fbd39d501f9da20 = $(`<div id="html_4e9a1f342d1fc7065fbd39d501f9da20" style="width: 100.0%; height: 100.0%;"><b>Bar del Mercat del Clot</b><br>2.5€ (2/04/24)<br><a href="https://maps.app.goo.gl/tR8J4GKxF58jc7vz7" target="_blank">Google Maps</a></div>`)[0];
+                popup_9aaa74631518a61a63884dc7c56480e0.setContent(html_4e9a1f342d1fc7065fbd39d501f9da20);
+            
+        
+
+        circle_marker_bea622b7925f7ef1291ae569cb06b5a5.bindPopup(popup_9aaa74631518a61a63884dc7c56480e0)
+        ;
+
+        
+    
+    
+            var circle_marker_b2792aa5a935b03865d2322f2a0ecc33 = L.circleMarker(
+                [41.42651834902185, 2.179274452917286],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_59f8df0a8a62bfbc61fcbb71c3313c86 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a0ea0836c19cd95016add0b71ec4d0ac = $(`<div id="html_a0ea0836c19cd95016add0b71ec4d0ac" style="width: 100.0%; height: 100.0%;"><b>Ca la Rosa</b><br>2.0€ (3/04/24)<br><a href="https://maps.app.goo.gl/wDxL9w5WZyi5tmyQ6" target="_blank">Google Maps</a></div>`)[0];
+                popup_59f8df0a8a62bfbc61fcbb71c3313c86.setContent(html_a0ea0836c19cd95016add0b71ec4d0ac);
+            
+        
+
+        circle_marker_b2792aa5a935b03865d2322f2a0ecc33.bindPopup(popup_59f8df0a8a62bfbc61fcbb71c3313c86)
+        ;
+
+        
+    
+    
+            var circle_marker_7a5d8bad402aae8165ea8a9942043038 = L.circleMarker(
+                [41.43144819381847, 2.176895273143162],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_bf040aee4a2a1ee64a39dc32f9a419f3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e04789156579b88bafd4bda5aad0c5ee = $(`<div id="html_e04789156579b88bafd4bda5aad0c5ee" style="width: 100.0%; height: 100.0%;"><b>Bar Sebas</b><br>2.2€ (11/04/24)<br><a href="https://maps.app.goo.gl/1faFpFBsPTcjeRKQ9" target="_blank">Google Maps</a></div>`)[0];
+                popup_bf040aee4a2a1ee64a39dc32f9a419f3.setContent(html_e04789156579b88bafd4bda5aad0c5ee);
+            
+        
+
+        circle_marker_7a5d8bad402aae8165ea8a9942043038.bindPopup(popup_bf040aee4a2a1ee64a39dc32f9a419f3)
+        ;
+
+        
+    
+    
+            var circle_marker_e6f2296f5209b53922da4b90b6a7343d = L.circleMarker(
+                [41.4325017673186, 2.1776774828171765],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_2360f2fbf1839fe6a4444d9da76d461a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_149bd71a44171f967e1154b8ad2bc606 = $(`<div id="html_149bd71a44171f967e1154b8ad2bc606" style="width: 100.0%; height: 100.0%;"><b>Panabar</b><br>2.0€ (11/04/24)<br><a href="https://maps.app.goo.gl/aSnfHKATL8emy4g29" target="_blank">Google Maps</a></div>`)[0];
+                popup_2360f2fbf1839fe6a4444d9da76d461a.setContent(html_149bd71a44171f967e1154b8ad2bc606);
+            
+        
+
+        circle_marker_e6f2296f5209b53922da4b90b6a7343d.bindPopup(popup_2360f2fbf1839fe6a4444d9da76d461a)
+        ;
+
+        
+    
+    
+            var circle_marker_d640dafee0901acf84911ecc0e3bb04b = L.circleMarker(
+                [41.39788961393264, 2.189971823904678],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_0f39222cfd80c68085ce929f19929d68 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ab27e7ad0829eda7e84d7e9c20400303 = $(`<div id="html_ab27e7ad0829eda7e84d7e9c20400303" style="width: 100.0%; height: 100.0%;"><b>Sonora Sport Tavern</b><br>3.0€ (12/04/24)<br><a href="https://maps.app.goo.gl/WaWUs9w52qH9iEiY6" target="_blank">Google Maps</a></div>`)[0];
+                popup_0f39222cfd80c68085ce929f19929d68.setContent(html_ab27e7ad0829eda7e84d7e9c20400303);
+            
+        
+
+        circle_marker_d640dafee0901acf84911ecc0e3bb04b.bindPopup(popup_0f39222cfd80c68085ce929f19929d68)
+        ;
+
+        
+    
+    
+            var circle_marker_6c32503783d7cc974855ef1ee9f3e409 = L.circleMarker(
+                [41.396568123490844, 2.1923899017652846],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_6a0217ab5351e13144321f3ffc69cfac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c2f984ea0c81cf56a9031fb7c439c8d9 = $(`<div id="html_c2f984ea0c81cf56a9031fb7c439c8d9" style="width: 100.0%; height: 100.0%;"><b>bb+</b><br>3.0€ (12/04/24)<br><a href="https://maps.app.goo.gl/MNpvedsasRadnv2i6" target="_blank">Google Maps</a></div>`)[0];
+                popup_6a0217ab5351e13144321f3ffc69cfac.setContent(html_c2f984ea0c81cf56a9031fb7c439c8d9);
+            
+        
+
+        circle_marker_6c32503783d7cc974855ef1ee9f3e409.bindPopup(popup_6a0217ab5351e13144321f3ffc69cfac)
+        ;
+
+        
+    
+    
+            var circle_marker_fa00e185dbd8a4835676a0fe0a308502 = L.circleMarker(
+                [41.37369211586075, 2.1373863075608246],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6400", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sants-Montju\u00efc"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_931b7fb2efa0a06831c749b120e64568 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_98669ddf71fb1edeebb4fc45f35d5585 = $(`<div id="html_98669ddf71fb1edeebb4fc45f35d5585" style="width: 100.0%; height: 100.0%;"><b>Sala Taro</b><br>3.5€ (17/04/24)<br><a href="https://maps.app.goo.gl/Mz5iqx9XPcMZMBwb9" target="_blank">Google Maps</a></div>`)[0];
+                popup_931b7fb2efa0a06831c749b120e64568.setContent(html_98669ddf71fb1edeebb4fc45f35d5585);
+            
+        
+
+        circle_marker_fa00e185dbd8a4835676a0fe0a308502.bindPopup(popup_931b7fb2efa0a06831c749b120e64568)
+        ;
+
+        
+    
+    
+            var circle_marker_ebdb002b07f507b3b71c0c0206354285 = L.circleMarker(
+                [41.40161678190858, 2.1964034093614044],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff300", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_edd74b30b1859096ef2566b149d04cea = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c001d8ba12f68c0e332a756cd5a5c4b8 = $(`<div id="html_c001d8ba12f68c0e332a756cd5a5c4b8" style="width: 100.0%; height: 100.0%;"><b>Niu : espai artístic contemporani</b><br>2.5€ (18/04/24)<br><a href="https://maps.app.goo.gl/rL1JTb3RRn15U54G7" target="_blank">Google Maps</a></div>`)[0];
+                popup_edd74b30b1859096ef2566b149d04cea.setContent(html_c001d8ba12f68c0e332a756cd5a5c4b8);
+            
+        
+
+        circle_marker_ebdb002b07f507b3b71c0c0206354285.bindPopup(popup_edd74b30b1859096ef2566b149d04cea)
+        ;
+
+        
+    
+    
+            var circle_marker_8949256c5b093f8c56728422ff06e4ac = L.circleMarker(
+                [41.37838461153486, 2.160810249215611],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_f02016bc320a9c42505d0466a0f10952 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f775eb128d8de17c9cf55be80378fcbe = $(`<div id="html_f775eb128d8de17c9cf55be80378fcbe" style="width: 100.0%; height: 100.0%;"><b>Casa Jacinta</b><br>2.2€ (20/04/24)<br><a href="https://maps.app.goo.gl/zxhZrjWPZnNuxTuc8" target="_blank">Google Maps</a></div>`)[0];
+                popup_f02016bc320a9c42505d0466a0f10952.setContent(html_f775eb128d8de17c9cf55be80378fcbe);
+            
+        
+
+        circle_marker_8949256c5b093f8c56728422ff06e4ac.bindPopup(popup_f02016bc320a9c42505d0466a0f10952)
+        ;
+
+        
+    
+    
+            var circle_marker_54886153dddcb618b5935ee6a782c87c = L.circleMarker(
+                [41.388823735667366, 2.1562481362875845],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_88afa7b7ddab82b574834980307ad462 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19b4b3a96399363f44962374743b4825 = $(`<div id="html_19b4b3a96399363f44962374743b4825" style="width: 100.0%; height: 100.0%;"><b>Bar Cafetería Saviq's</b><br>2.3€ (23/04/24)<br><a href="https://maps.app.goo.gl/J6HNy5XG7L7ejXto7" target="_blank">Google Maps</a></div>`)[0];
+                popup_88afa7b7ddab82b574834980307ad462.setContent(html_19b4b3a96399363f44962374743b4825);
+            
+        
+
+        circle_marker_54886153dddcb618b5935ee6a782c87c.bindPopup(popup_88afa7b7ddab82b574834980307ad462)
+        ;
+
+        
+    
+    
+            var circle_marker_9294a1490962d19794b8ce3d4c47b4a7 = L.circleMarker(
+                [41.409627837645736, 2.1886519664530404],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_18235b083aabe192f526a30410c3fbc0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d00ff6d970740816a2ab10c406edc1d2 = $(`<div id="html_d00ff6d970740816a2ab10c406edc1d2" style="width: 100.0%; height: 100.0%;"><b>Sarfraz Kebabish</b><br>2.2€ (24/04/24)<br><a href="https://maps.app.goo.gl/V6orGgxFChwmQKtMA" target="_blank">Google Maps</a></div>`)[0];
+                popup_18235b083aabe192f526a30410c3fbc0.setContent(html_d00ff6d970740816a2ab10c406edc1d2);
+            
+        
+
+        circle_marker_9294a1490962d19794b8ce3d4c47b4a7.bindPopup(popup_18235b083aabe192f526a30410c3fbc0)
+        ;
+
+        
+    
+    
+            var circle_marker_01e2baa74030f6c63cd3cf8e3ddbec35 = L.circleMarker(
+                [41.40934765741025, 2.1956471555580284],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#41a000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_b63b70579833652bccdb1730666a6112 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_14bf13fda6f345a43412b1d3349ad859 = $(`<div id="html_14bf13fda6f345a43412b1d3349ad859" style="width: 100.0%; height: 100.0%;"><b>Pastelería Bruna</b><br>1.8€ (24/04/24)<br><a href="https://maps.app.goo.gl/rJCNJT2A7gdra4fi9" target="_blank">Google Maps</a></div>`)[0];
+                popup_b63b70579833652bccdb1730666a6112.setContent(html_14bf13fda6f345a43412b1d3349ad859);
+            
+        
+
+        circle_marker_01e2baa74030f6c63cd3cf8e3ddbec35.bindPopup(popup_b63b70579833652bccdb1730666a6112)
+        ;
+
+        
+    
+    
+            var circle_marker_cd553b0cbcf06554cce859a7ee58c0bd = L.circleMarker(
+                [41.41606420167088, 2.187214379306511],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_4b31bd9abb649a10f3d8094c1f47299a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a1bd9531025ec2c6984a924aa79d5391 = $(`<div id="html_a1bd9531025ec2c6984a924aa79d5391" style="width: 100.0%; height: 100.0%;"><b>CA LA LOLI 2</b><br>2.3€ (25/04/24)<br><a href="https://maps.app.goo.gl/KZhuDX2iHQSnqKs49" target="_blank">Google Maps</a></div>`)[0];
+                popup_4b31bd9abb649a10f3d8094c1f47299a.setContent(html_a1bd9531025ec2c6984a924aa79d5391);
+            
+        
+
+        circle_marker_cd553b0cbcf06554cce859a7ee58c0bd.bindPopup(popup_4b31bd9abb649a10f3d8094c1f47299a)
+        ;
+
+        
+    
+    
+            var circle_marker_062cd8d22a99cc546f9280029279fa44 = L.circleMarker(
+                [41.37310406553604, 2.1670828335048364],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sants-Montju\u00efc"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_23cbbbfc8b725fd32f3175932f6c3323 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c636c9597448bd683f0c569b29b199dd = $(`<div id="html_c636c9597448bd683f0c569b29b199dd" style="width: 100.0%; height: 100.0%;"><b>Lilith & Sons</b><br>4.0€ (29/04/24)<br><a href="https://maps.app.goo.gl/BVsXvvcXKPge32Hd7" target="_blank">Google Maps</a></div>`)[0];
+                popup_23cbbbfc8b725fd32f3175932f6c3323.setContent(html_c636c9597448bd683f0c569b29b199dd);
+            
+        
+
+        circle_marker_062cd8d22a99cc546f9280029279fa44.bindPopup(popup_23cbbbfc8b725fd32f3175932f6c3323)
+        ;
+
+        
+    
+    
+            var circle_marker_c4eac1950148851133dd276df66f6724 = L.circleMarker(
+                [41.374347541706804, 2.167415872281784],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6400", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sants-Montju\u00efc"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_7101da072b9a802dcc5ac2f6820dc80e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0902640415dded38d35764fa20ea11ed = $(`<div id="html_0902640415dded38d35764fa20ea11ed" style="width: 100.0%; height: 100.0%;"><b>RADIO NOSSA</b><br>3.5€ (29/04/24)<br><a href="https://maps.app.goo.gl/bc9BmRnVSA8qZZh57" target="_blank">Google Maps</a></div>`)[0];
+                popup_7101da072b9a802dcc5ac2f6820dc80e.setContent(html_0902640415dded38d35764fa20ea11ed);
+            
+        
+
+        circle_marker_c4eac1950148851133dd276df66f6724.bindPopup(popup_7101da072b9a802dcc5ac2f6820dc80e)
+        ;
+
+        
+    
+    
+            var circle_marker_352988daa152a060d5b3c97db6e1969d = L.circleMarker(
+                [41.37622203018065, 2.1601804600990824],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_b23c9315576917b8a85b99dfb86ab029 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_103cd8bdd43830d79ecee91ae5a4910a = $(`<div id="html_103cd8bdd43830d79ecee91ae5a4910a" style="width: 100.0%; height: 100.0%;"><b>Mr White Cocktail Bar</b><br>4.0€ (29/04/24)<br><a href="https://maps.app.goo.gl/EZv27gZzR7LW7piBA" target="_blank">Google Maps</a></div>`)[0];
+                popup_b23c9315576917b8a85b99dfb86ab029.setContent(html_103cd8bdd43830d79ecee91ae5a4910a);
+            
+        
+
+        circle_marker_352988daa152a060d5b3c97db6e1969d.bindPopup(popup_b23c9315576917b8a85b99dfb86ab029)
+        ;
+
+        
+    
+    
+            var circle_marker_833cc23068aba841b143b851bf69fb82 = L.circleMarker(
+                [41.3793935577922, 2.161777698068039],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffaa00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_040e415d6c9af582a1c9710605ca2ce7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8688b41323cd74388fde7971ee627db3 = $(`<div id="html_8688b41323cd74388fde7971ee627db3" style="width: 100.0%; height: 100.0%;"><b>Restaurant Amigó Sant Antoni</b><br>3.15€ (2/05/24)<br><a href="https://maps.app.goo.gl/upUUQUsJMGnuYgTu7" target="_blank">Google Maps</a></div>`)[0];
+                popup_040e415d6c9af582a1c9710605ca2ce7.setContent(html_8688b41323cd74388fde7971ee627db3);
+            
+        
+
+        circle_marker_833cc23068aba841b143b851bf69fb82.bindPopup(popup_040e415d6c9af582a1c9710605ca2ce7)
+        ;
+
+        
+    
+    
+            var circle_marker_8a46fc0b940d38640f189ab276f907b1 = L.circleMarker(
+                [41.38629424331948, 2.1645686655941936],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_78112aae713f02146dd4cc5907a9c18b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e25fb6de2e1be2abdbf5939b46e6fa30 = $(`<div id="html_e25fb6de2e1be2abdbf5939b46e6fa30" style="width: 100.0%; height: 100.0%;"><b>Bar Estudiantil</b><br>3.0€ (4/05/24)<br><a href="https://maps.app.goo.gl/kUsjnB6SWE3foXka6" target="_blank">Google Maps</a></div>`)[0];
+                popup_78112aae713f02146dd4cc5907a9c18b.setContent(html_e25fb6de2e1be2abdbf5939b46e6fa30);
+            
+        
+
+        circle_marker_8a46fc0b940d38640f189ab276f907b1.bindPopup(popup_78112aae713f02146dd4cc5907a9c18b)
+        ;
+
+        
+    
+    
+            var circle_marker_b7c72d78a6158b185ad917dd91729eff = L.circleMarker(
+                [41.424954225924125, 2.190465180121961],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_077ab5b500bf86577283122227439b45 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c946cc657f697c8ce7f3a976a38eb9b9 = $(`<div id="html_c946cc657f697c8ce7f3a976a38eb9b9" style="width: 100.0%; height: 100.0%;"><b>L'Empanat</b><br>2.2€ (17/05/24)<br><a href="https://maps.app.goo.gl/e1a3bSpZBxymHXaNA" target="_blank">Google Maps</a></div>`)[0];
+                popup_077ab5b500bf86577283122227439b45.setContent(html_c946cc657f697c8ce7f3a976a38eb9b9);
+            
+        
+
+        circle_marker_b7c72d78a6158b185ad917dd91729eff.bindPopup(popup_077ab5b500bf86577283122227439b45)
+        ;
+
+        
+    
+    
+            var circle_marker_b84b06b1fddffec85673ae2381bc5dfa = L.circleMarker(
+                [41.37654438735631, 2.1656022168601727],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffd100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_6baeff149f3a0803face7f64ebfa6942 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_18db928d36efa9a77157d4a486f50d59 = $(`<div id="html_18db928d36efa9a77157d4a486f50d59" style="width: 100.0%; height: 100.0%;"><b>La Barmutería</b><br>2.8€ (17/05/24)<br><a href="https://maps.app.goo.gl/X1pa2JWnMrFLdkFP9" target="_blank">Google Maps</a></div>`)[0];
+                popup_6baeff149f3a0803face7f64ebfa6942.setContent(html_18db928d36efa9a77157d4a486f50d59);
+            
+        
+
+        circle_marker_b84b06b1fddffec85673ae2381bc5dfa.bindPopup(popup_6baeff149f3a0803face7f64ebfa6942)
+        ;
+
+        
+    
+    
+            var circle_marker_2903bcbc2a92e0a76f199d9d6fbc7c60 = L.circleMarker(
+                [41.38621061759952, 2.164687690754541],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffa500", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_7628e09fa6520c762c6400a3e97c4ae3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8e218648207a2cd9523d4a2d285a5bf4 = $(`<div id="html_8e218648207a2cd9523d4a2d285a5bf4" style="width: 100.0%; height: 100.0%;"><b>Cerveseria Universitat</b><br>3.2€ (17/05/24)<br><a href="https://maps.app.goo.gl/8Yh8d52sJ2EoCqix7" target="_blank">Google Maps</a></div>`)[0];
+                popup_7628e09fa6520c762c6400a3e97c4ae3.setContent(html_8e218648207a2cd9523d4a2d285a5bf4);
+            
+        
+
+        circle_marker_2903bcbc2a92e0a76f199d9d6fbc7c60.bindPopup(popup_7628e09fa6520c762c6400a3e97c4ae3)
+        ;
+
+        
+    
+    
+            var circle_marker_fce36ac8bfcffa316407c6cb85daf072 = L.circleMarker(
+                [41.37502697329077, 2.172646754577266],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffdd00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_ffc7239f9d98cedc62e36d9a98d7b50a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d0cd90a99c12dd7eaf38528dd8724e0 = $(`<div id="html_6d0cd90a99c12dd7eaf38528dd8724e0" style="width: 100.0%; height: 100.0%;"><b>Racó Art del Teatre</b><br>2.7€ (17/05/24)<br><a href="https://maps.app.goo.gl/3tqujzsNnExPwPHG8" target="_blank">Google Maps</a></div>`)[0];
+                popup_ffc7239f9d98cedc62e36d9a98d7b50a.setContent(html_6d0cd90a99c12dd7eaf38528dd8724e0);
+            
+        
+
+        circle_marker_fce36ac8bfcffa316407c6cb85daf072.bindPopup(popup_ffc7239f9d98cedc62e36d9a98d7b50a)
+        ;
+
+        
+    
+    
+            var circle_marker_76dae82d25877fc69d0a7839a6b88361 = L.circleMarker(
+                [41.42673758376823, 2.1774173193179496],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_dc8296be667622d95c11396e21e8f6d8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4233626932bd6d62fb88210d522931d1 = $(`<div id="html_4233626932bd6d62fb88210d522931d1" style="width: 100.0%; height: 100.0%;"><b>Star-bar</b><br>2.1€ (23/05/24)<br><a href="https://maps.app.goo.gl/QcGV1U5gPmmGG3HLA" target="_blank">Google Maps</a></div>`)[0];
+                popup_dc8296be667622d95c11396e21e8f6d8.setContent(html_4233626932bd6d62fb88210d522931d1);
+            
+        
+
+        circle_marker_76dae82d25877fc69d0a7839a6b88361.bindPopup(popup_dc8296be667622d95c11396e21e8f6d8)
+        ;
+
+        
+    
+    
+            var circle_marker_71ee6816161561c49d4fee988673c761 = L.circleMarker(
+                [41.37660449883098, 2.157095301532445],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff300", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_0ef24403ffff2bdf1916f945eabd40ab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_234d6ca122e0ca99636d48bca8d35883 = $(`<div id="html_234d6ca122e0ca99636d48bca8d35883" style="width: 100.0%; height: 100.0%;"><b>Cuba De Janeiro</b><br>2.5€ (24/05/24)<br><a href="https://maps.app.goo.gl/axPskbAAUyncoDgV7" target="_blank">Google Maps</a></div>`)[0];
+                popup_0ef24403ffff2bdf1916f945eabd40ab.setContent(html_234d6ca122e0ca99636d48bca8d35883);
+            
+        
+
+        circle_marker_71ee6816161561c49d4fee988673c761.bindPopup(popup_0ef24403ffff2bdf1916f945eabd40ab)
+        ;
+
+        
+    
+    
+            var circle_marker_d84fd6428477b27f45aa51ab36457331 = L.circleMarker(
+                [41.43782999326304, 2.1920163171794034],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_15d94c546f09c5e73184fd3bd9b807b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e420d31d53bddd30d85cfe67a2bbe7be = $(`<div id="html_e420d31d53bddd30d85cfe67a2bbe7be" style="width: 100.0%; height: 100.0%;"><b>Casa CINCA</b><br>2.0€ (25/05/24)<br><a href="https://www.google.com/maps/place/Casa+CINCA/data=!4m2!3m1!19sChIJ___P_9y8pBIRC8r1n7uJHY4" target="_blank">Google Maps</a></div>`)[0];
+                popup_15d94c546f09c5e73184fd3bd9b807b3.setContent(html_e420d31d53bddd30d85cfe67a2bbe7be);
+            
+        
+
+        circle_marker_d84fd6428477b27f45aa51ab36457331.bindPopup(popup_15d94c546f09c5e73184fd3bd9b807b3)
+        ;
+
+        
+    
+    
+            var circle_marker_d8877cc9eea31232d9daf99d9357600b = L.circleMarker(
+                [41.37811341019837, 2.1695627530637047],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82c100", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_f7d95c58a5609f3ada356060f438cca5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e99618be7e3b91f20c07e536e94e547c = $(`<div id="html_e99618be7e3b91f20c07e536e94e547c" style="width: 100.0%; height: 100.0%;"><b>Istambul Kebab</b><br>2.0€ (25/05/24)<br><a href="https://maps.app.goo.gl/HZWvSz2Hs4khhFTVA" target="_blank">Google Maps</a></div>`)[0];
+                popup_f7d95c58a5609f3ada356060f438cca5.setContent(html_e99618be7e3b91f20c07e536e94e547c);
+            
+        
+
+        circle_marker_d8877cc9eea31232d9daf99d9357600b.bindPopup(popup_f7d95c58a5609f3ada356060f438cca5)
+        ;
+
+        
+    
+    
+            var circle_marker_c8f821747bed94ceab4991678b9b96ba = L.circleMarker(
+                [41.37800120586346, 2.1696908285440615],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffd600", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_a9215a726bcf8ec1d6cb35905dd6ce36 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e9c738f3806094fc44886cc24d0dd55e = $(`<div id="html_e9c738f3806094fc44886cc24d0dd55e" style="width: 100.0%; height: 100.0%;"><b>Madame Jasmine</b><br>2.75€ (25/05/24)<br><a href="https://maps.app.goo.gl/bSh8BQMgQztYKvrC8" target="_blank">Google Maps</a></div>`)[0];
+                popup_a9215a726bcf8ec1d6cb35905dd6ce36.setContent(html_e9c738f3806094fc44886cc24d0dd55e);
+            
+        
+
+        circle_marker_c8f821747bed94ceab4991678b9b96ba.bindPopup(popup_a9215a726bcf8ec1d6cb35905dd6ce36)
+        ;
+
+        
+    
+    
+            var circle_marker_7e18bec5d692aa2b6080053ce7a99067 = L.circleMarker(
+                [41.373441817379465, 2.1563896873683865],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bedf00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sants-Montju\u00efc"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_594418afc05493dcb00372fb5cdf34ae = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fc5fc8b43535b9388a438865531cd8dc = $(`<div id="html_fc5fc8b43535b9388a438865531cd8dc" style="width: 100.0%; height: 100.0%;"><b>Sta. Madrona</b><br>2.2€ (14/06/24)<br><a href="https://maps.app.goo.gl/Tr3y12K2TXoTxJwD8" target="_blank">Google Maps</a></div>`)[0];
+                popup_594418afc05493dcb00372fb5cdf34ae.setContent(html_fc5fc8b43535b9388a438865531cd8dc);
+            
+        
+
+        circle_marker_7e18bec5d692aa2b6080053ce7a99067.bindPopup(popup_594418afc05493dcb00372fb5cdf34ae)
+        ;
+
+        
+    
+    
+            var circle_marker_b692e4b0cdf12c8db0d7d9518208acd2 = L.circleMarker(
+                [41.42328628666958, 2.1884453003627358],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_b2919f991285230606c6a3deeb5f9528 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c9d838b61e1bc3b180ff1f3c599f03b = $(`<div id="html_1c9d838b61e1bc3b180ff1f3c599f03b" style="width: 100.0%; height: 100.0%;"><b>Maryvic</b><br>2.1€ (15/06/24)<br><a href="https://maps.app.goo.gl/6UffJUpKShQczcpv9" target="_blank">Google Maps</a></div>`)[0];
+                popup_b2919f991285230606c6a3deeb5f9528.setContent(html_1c9d838b61e1bc3b180ff1f3c599f03b);
+            
+        
+
+        circle_marker_b692e4b0cdf12c8db0d7d9518208acd2.bindPopup(popup_b2919f991285230606c6a3deeb5f9528)
+        ;
+
+        
+    
+    
+            var circle_marker_3db073014732a18b5f3eb92344a1ca9b = L.circleMarker(
+                [41.37234998779161, 2.156053121865185],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff300", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sants-Montju\u00efc"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_d060d248b524a77d2b2b37f7be936ef4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_972c3085b6e1467e4a59f061001a666b = $(`<div id="html_972c3085b6e1467e4a59f061001a666b" style="width: 100.0%; height: 100.0%;"><b>El Racó de Montjuïc</b><br>2.5€ (15/06/24)<br><a href="https://maps.app.goo.gl/UUdvhzSYcywLonTj9" target="_blank">Google Maps</a></div>`)[0];
+                popup_d060d248b524a77d2b2b37f7be936ef4.setContent(html_972c3085b6e1467e4a59f061001a666b);
+            
+        
+
+        circle_marker_3db073014732a18b5f3eb92344a1ca9b.bindPopup(popup_d060d248b524a77d2b2b37f7be936ef4)
+        ;
+
+        
+    
+    
+            var circle_marker_ea72e088f2f38f1e0af1e59ac81d0346 = L.circleMarker(
+                [41.38294863131283, 2.1652924199786674],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Ciutat Vella"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_6b33650d7d1bc2259ce479a06915763e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d225c2039e01f29f328d0f8e8a44f100 = $(`<div id="html_d225c2039e01f29f328d0f8e8a44f100" style="width: 100.0%; height: 100.0%;"><b>La Cobra</b><br>3.0€ (20/06/24)<br><a href="https://maps.app.goo.gl/LgcbVN3zSdSbEJgf9" target="_blank">Google Maps</a></div>`)[0];
+                popup_6b33650d7d1bc2259ce479a06915763e.setContent(html_d225c2039e01f29f328d0f8e8a44f100);
+            
+        
+
+        circle_marker_ea72e088f2f38f1e0af1e59ac81d0346.bindPopup(popup_6b33650d7d1bc2259ce479a06915763e)
+        ;
+
+        
+    
+    
+            var circle_marker_0bca7c36b44acd6856111136486924bc = L.circleMarker(
+                [41.39363920794346, 2.174324880883583],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Eixample"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_27e2b4fc4b73f0638902ef7c19755451 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_db89d7659d6dff6c009f0484dd6d1154 = $(`<div id="html_db89d7659d6dff6c009f0484dd6d1154" style="width: 100.0%; height: 100.0%;"><b>Libertine Cocktail Bar at Casa Bonay</b><br>4.0€ (24/06/24)<br><a href="https://www.google.com/maps/search/Libertine/@41.39357376098633,2.17429518699646,17z?hl=es" target="_blank">Google Maps</a></div>`)[0];
+                popup_27e2b4fc4b73f0638902ef7c19755451.setContent(html_db89d7659d6dff6c009f0484dd6d1154);
+            
+        
+
+        circle_marker_0bca7c36b44acd6856111136486924bc.bindPopup(popup_27e2b4fc4b73f0638902ef7c19755451)
+        ;
+
+        
+    
+    
+            var circle_marker_860b8dfe70f202c6dc63b9a208e6ed9a = L.circleMarker(
+                [41.406742128359966, 2.2016598733334223],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffba00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_60a4e2119378e27703b6093a883be25b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1ddea96f097a7d3426ba1ca02b2a46e8 = $(`<div id="html_1ddea96f097a7d3426ba1ca02b2a46e8" style="width: 100.0%; height: 100.0%;"><b>Sports Bar Italian Food</b><br>3.0€ (26/06/24)<br><a href="https://maps.app.goo.gl/C9x5MYksP467nkmM7" target="_blank">Google Maps</a></div>`)[0];
+                popup_60a4e2119378e27703b6093a883be25b.setContent(html_1ddea96f097a7d3426ba1ca02b2a46e8);
+            
+        
+
+        circle_marker_860b8dfe70f202c6dc63b9a208e6ed9a.bindPopup(popup_60a4e2119378e27703b6093a883be25b)
+        ;
+
+        
+    
+    
+            var circle_marker_56298b3db00a22f3d592b41c4cdb2270 = L.circleMarker(
+                [41.410819989569795, 2.2158731540256125],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff300", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_e8bbe0c87e12d5f860083fade178ee41 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_58329127d924389fbf6accb68e7ac629 = $(`<div id="html_58329127d924389fbf6accb68e7ac629" style="width: 100.0%; height: 100.0%;"><b>Bar Restaurant L'Illa del Mar</b><br>2.5€ (26/06/24)<br><a href="https://maps.app.goo.gl/KtM5HEzCwH41KW6L6" target="_blank">Google Maps</a></div>`)[0];
+                popup_e8bbe0c87e12d5f860083fade178ee41.setContent(html_58329127d924389fbf6accb68e7ac629);
+            
+        
+
+        circle_marker_56298b3db00a22f3d592b41c4cdb2270.bindPopup(popup_e8bbe0c87e12d5f860083fade178ee41)
+        ;
+
+        
+    
+    
+            var circle_marker_72212149bf1ca72558a8fbaf537da95c = L.circleMarker(
+                [41.437656211447866, 2.1924420736224084],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Andreu"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_35c953729a4f4555d8d3123dbc329e91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4eb6a3ba90e20565aff6ca6b8e93155e = $(`<div id="html_4eb6a3ba90e20565aff6ca6b8e93155e" style="width: 100.0%; height: 100.0%;"><b>BAR TAPAS 23</b><br>2.1€ (29/06/24)<br><a href="https://maps.app.goo.gl/HP5fstkFVx3oJfji6" target="_blank">Google Maps</a></div>`)[0];
+                popup_35c953729a4f4555d8d3123dbc329e91.setContent(html_4eb6a3ba90e20565aff6ca6b8e93155e);
+            
+        
+
+        circle_marker_72212149bf1ca72558a8fbaf537da95c.bindPopup(popup_35c953729a4f4555d8d3123dbc329e91)
+        ;
+
+        
+    
+    
+            var circle_marker_8f2371d8e165eb93dafd49399d8612ed = L.circleMarker(
+                [41.39266024255506, 2.191322493601034],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Sant Mart\u00ed"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_6ee79055112923fdb0abf1e035a13ed2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb2c88e5045d8404a7a3d484163b37d7 = $(`<div id="html_cb2c88e5045d8404a7a3d484163b37d7" style="width: 100.0%; height: 100.0%;"><b>PETITA LLUM Café&Bar</b><br>2.3€ (3/04/25)<br><a href="https://maps.app.goo.gl/KWNLu3ntw1YSc84z5" target="_blank">Google Maps</a></div>`)[0];
+                popup_6ee79055112923fdb0abf1e035a13ed2.setContent(html_cb2c88e5045d8404a7a3d484163b37d7);
+            
+        
+
+        circle_marker_8f2371d8e165eb93dafd49399d8612ed.bindPopup(popup_6ee79055112923fdb0abf1e035a13ed2)
+        ;
+
+        
+    
+    
+            var circle_marker_6d27c087a7ac2a8e9f8db51446e54f50 = L.circleMarker(
+                [41.42984843983926, 2.180947949027388],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1f000", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "tags": ["Nou Barris"], "weight": 1}
+            ).addTo(feature_group_f4cd69069d02d5d7875c376d4300c82f);
+        
+    
+        var popup_3561c82635ea35ee39e9a00b34c83d41 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ab977d52f497121a8d41b9c18a848ecf = $(`<div id="html_ab977d52f497121a8d41b9c18a848ecf" style="width: 100.0%; height: 100.0%;"><b>Polosko Tapas Bar</b><br>2.3€ (4/04/25)<br><a href="https://maps.app.goo.gl/yrpcMiXN8zNEzdVRA" target="_blank">Google Maps</a></div>`)[0];
+                popup_3561c82635ea35ee39e9a00b34c83d41.setContent(html_ab977d52f497121a8d41b9c18a848ecf);
+            
+        
+
+        circle_marker_6d27c087a7ac2a8e9f8db51446e54f50.bindPopup(popup_3561c82635ea35ee39e9a00b34c83d41)
+        ;
+
+        
+    
+    
+            feature_group_f4cd69069d02d5d7875c376d4300c82f.addTo(map_a2b3b7d77adc71feecff48667843c2f4);
+        
+    
+        function geo_json_e35c562cf36064303bb4539787a144b2_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": false, "weight": 3};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_e35c562cf36064303bb4539787a144b2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e35c562cf36064303bb4539787a144b2 = L.geoJson(null, {
+                onEachFeature: geo_json_e35c562cf36064303bb4539787a144b2_onEachFeature,
+            
+                pointToLayer: geo_json_e35c562cf36064303bb4539787a144b2_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_e35c562cf36064303bb4539787a144b2_add (data) {
+            geo_json_e35c562cf36064303bb4539787a144b2
+                .addData(data);
+        }
+            geo_json_e35c562cf36064303bb4539787a144b2_add({"features": [{"geometry": {"coordinates": [2.196292690460221, 41.41251743900398], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Bar Llusia", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.193865897127358, 41.42985344644889], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "El Caf\u00e9 de Santi", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.1703972938656597, 41.39211043659654], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Snooker", "preu": 3.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1950544363542326, 41.41017465510055], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Bar Lafuente", "preu": 2.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.140183309731352, 41.390634771304775], "type": "Point"}, "properties": {"barri": "Les Corts", "name": "GENA\u0027S Bar", "preu": 1.9}, "type": "Feature"}, {"geometry": {"coordinates": [2.180088158895469, 41.39184711831014], "type": "Point"}, "properties": {"barri": "Eixample", "name": "La Triunfal", "preu": 2.8}, "type": "Feature"}, {"geometry": {"coordinates": [2.1660964233136, 41.38514660620636], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Breik Cafeter\u00eda", "preu": 2.85}, "type": "Feature"}, {"geometry": {"coordinates": [2.1755330502165413, 41.382894128546], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "La Alcoba Azul - Tapas", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.17399653189435, 41.389237877878564], "type": "Point"}, "properties": {"barri": "Eixample", "name": "gastrocat", "preu": 2.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.145519016635264, 41.395997549197716], "type": "Point"}, "properties": {"barri": "Sarri\u00e0-Sant Gervasi", "name": "Bar Marcel Santal\u00f3", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1751711194223, 41.380575657524695], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Sidecar", "preu": 3.8}, "type": "Feature"}, {"geometry": {"coordinates": [2.1734232718273057, 41.43009699531158], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Il caf\u00e9 di Donatto", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.171576002153089, 41.37857056329042], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Preet Tandori Indian Restaurant", "preu": 2.25}, "type": "Feature"}, {"geometry": {"coordinates": [2.158198713631431, 41.40241311304095], "type": "Point"}, "properties": {"barri": "Gr\u00e0cia", "name": "Pepa Tomate Gr\u00e0cia", "preu": 3.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.186296189023809, 41.4285260865383], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Resturante Ramen", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1820107079154383, 41.38330567804903], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Santa Maria del Mar", "preu": 3.55}, "type": "Feature"}, {"geometry": {"coordinates": [2.1767228472593008, 41.38475498867363], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "El Caf\u00e8 d\u0027en V\u00edctor. Restaurante. Bar de tapas. Taper\u00eda.", "preu": 2.75}, "type": "Feature"}, {"geometry": {"coordinates": [2.160155934475473, 41.408721235651825], "type": "Point"}, "properties": {"barri": "Gr\u00e0cia", "name": "Restaurante Am\u00e9rica", "preu": 2.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.161794523169726, 41.38848794630618], "type": "Point"}, "properties": {"barri": "Eixample", "name": "4 Latas Letamendi", "preu": 2.9}, "type": "Feature"}, {"geometry": {"coordinates": [2.175749463010626, 41.42408882230496], "type": "Point"}, "properties": {"barri": "Horta-Guinard\u00f3", "name": "Moreno Bar Tapas", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.191816385231935, 41.42588476209456], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Com a Casa", "preu": 2.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.1759701981642734, 41.42851050021063], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Bar Restaurant Sofy", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1626665014894755, 41.372218220256784], "type": "Point"}, "properties": {"barri": "Sants-Montju\u00efc", "name": "El Carro Gros", "preu": 2.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1609089795655083, 41.383495282854], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Lido", "preu": 2.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1578678009894148, 41.38934760870726], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Espit Chupitos", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1787408874629053, 41.379330080396905], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Polaroid Bar", "preu": 2.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.181871205789937, 41.43092165925054], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Bar Bilbilis", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1743145321251838, 41.42714576765212], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Encanto", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1710518834040227, 41.43049711808951], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Frankfurt Iberic", "preu": 2.05}, "type": "Feature"}, {"geometry": {"coordinates": [2.163829585587909, 41.38985151341556], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Lateral Consell de Cent", "preu": 4.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1810001367905953, 41.431354585682506], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Al Teu Gust", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1569772583484954, 41.40494150771099], "type": "Point"}, "properties": {"barri": "Gr\u00e0cia", "name": "Terra Bar S C P", "preu": 3.4}, "type": "Feature"}, {"geometry": {"coordinates": [2.2012318089568828, 41.40125943479774], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Monopol", "preu": 2.6}, "type": "Feature"}, {"geometry": {"coordinates": [2.180284215136492, 41.386984398528234], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Space Cowboy", "preu": 3.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1788453978382685, 41.38365344910685], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Dunne\u0027s Irish Bar and Restaurant", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.15864437833145, 41.37550241585035], "type": "Point"}, "properties": {"barri": "Eixample", "name": "V de Vermut", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1760456352311257, 41.43016642909363], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "\u0130stanbul parrilla", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1864179976759495, 41.43031962685466], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Livingstone", "preu": 2.6}, "type": "Feature"}, {"geometry": {"coordinates": [2.217577353829852, 41.411234085031076], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Bar Estrella", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.186486845194863, 41.430295829794495], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "\u00cfbar", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1834996627737056, 41.432031875538236], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Cerveseria El Rac\u00f3 De Sant Andreu", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.175258458532866, 41.42911214722657], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Bar Taberneta", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.18534966577336, 41.43028819175985], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Bar Restaurante La Pubilla", "preu": 2.45}, "type": "Feature"}, {"geometry": {"coordinates": [2.1883707, 41.4237674], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Granja Sant Jordi", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.175531445891712, 41.43977197266024], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Drag\u00f3n Via Julia", "preu": 2.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.1613385807082697, 41.380779742533285], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Tarea Fina", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1872569864284883, 41.42323817724328], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "El rinc\u00f3n de los amigos", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.180174830679414, 41.42013332767205], "type": "Point"}, "properties": {"barri": "Horta-Guinard\u00f3", "name": "El Rac\u00f3 de l\u0027Opa", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1586013664013137, 41.387090343369955], "type": "Point"}, "properties": {"barri": "Eixample", "name": "El Ra\u00efm", "preu": 2.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.156990036367222, 41.401764760051606], "type": "Point"}, "properties": {"barri": "Gr\u00e0cia", "name": "Woody Bar", "preu": 2.95}, "type": "Feature"}, {"geometry": {"coordinates": [2.164162153061724, 41.374771049203524], "type": "Point"}, "properties": {"barri": "Sants-Montju\u00efc", "name": "Frankfurt Can Eusebio", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.174510307534942, 41.408518873849374], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Sagradas Tapas", "preu": 2.4}, "type": "Feature"}, {"geometry": {"coordinates": [2.173974113472083, 41.40473407848793], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Bar Gerveseria", "preu": 2.4}, "type": "Feature"}, {"geometry": {"coordinates": [2.147203743603055, 41.37504796747977], "type": "Point"}, "properties": {"barri": "Sants-Montju\u00efc", "name": "Frankfurt Station", "preu": 2.4}, "type": "Feature"}, {"geometry": {"coordinates": [2.153046846358869, 41.377616025714566], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Clau Bar Cafeteria", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.1749850418989842, 41.40557637412023], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Bar Restaurante Lepanto", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1818249111360744, 41.42978856640363], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Bar Ibles", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1904095387753277, 41.400517187583006], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Diam\u00e0ntic", "preu": 2.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.1873861272895754, 41.421616295954735], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "CRIPTOCAF\u00c9 BAR", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.183487020989466, 41.41986367340667], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Bellmore", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.15127459149067, 41.38784534222763], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Rocktail", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.178607359063933, 41.38543795706633], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Lupara", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.187547550415945, 41.421508467377166], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Cervecer\u00eda Nu\u00f1ez", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.1856139583689926, 41.40741349600727], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Bar 1978", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.189314861828827, 41.41087407456048], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Restaurante Sol Naciente II", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.163645042476203, 41.38128389549683], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Bracaf\u00e8 Sant Antoni", "preu": 2.95}, "type": "Feature"}, {"geometry": {"coordinates": [2.161027740473712, 41.38557956417174], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Titanic Barcelona", "preu": 3.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1661181578155615, 41.38632984327765], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Scobies Irish Pub", "preu": 3.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.188772660999988, 41.408006945571806], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Bar del Mercat del Clot", "preu": 2.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.179274452917286, 41.42651834902185], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Ca la Rosa", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.176895273143162, 41.43144819381847], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Bar Sebas", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1776774828171765, 41.4325017673186], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Panabar", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.189971823904678, 41.39788961393264], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Sonora Sport Tavern", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1923899017652846, 41.396568123490844], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "bb+", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1373863075608246, 41.37369211586075], "type": "Point"}, "properties": {"barri": "Sants-Montju\u00efc", "name": "Sala Taro", "preu": 3.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1964034093614044, 41.40161678190858], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Niu : espai art\u00edstic contemporani", "preu": 2.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.160810249215611, 41.37838461153486], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Casa Jacinta", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1562481362875845, 41.388823735667366], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Bar Cafeter\u00eda Saviq\u0027s", "preu": 2.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.1886519664530404, 41.409627837645736], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Sarfraz Kebabish", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1956471555580284, 41.40934765741025], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Pasteler\u00eda Bruna", "preu": 1.8}, "type": "Feature"}, {"geometry": {"coordinates": [2.187214379306511, 41.41606420167088], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "CA LA LOLI 2", "preu": 2.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.1670828335048364, 41.37310406553604], "type": "Point"}, "properties": {"barri": "Sants-Montju\u00efc", "name": "Lilith \u0026 Sons", "preu": 4.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.167415872281784, 41.374347541706804], "type": "Point"}, "properties": {"barri": "Sants-Montju\u00efc", "name": "RADIO NOSSA", "preu": 3.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1601804600990824, 41.37622203018065], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Mr White Cocktail Bar", "preu": 4.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.161777698068039, 41.3793935577922], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Restaurant Amig\u00f3 Sant Antoni", "preu": 3.15}, "type": "Feature"}, {"geometry": {"coordinates": [2.1645686655941936, 41.38629424331948], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Bar Estudiantil", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.190465180121961, 41.424954225924125], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "L\u0027Empanat", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1656022168601727, 41.37654438735631], "type": "Point"}, "properties": {"barri": "Eixample", "name": "La Barmuter\u00eda", "preu": 2.8}, "type": "Feature"}, {"geometry": {"coordinates": [2.164687690754541, 41.38621061759952], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Cerveseria Universitat", "preu": 3.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.172646754577266, 41.37502697329077], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Rac\u00f3 Art del Teatre", "preu": 2.7}, "type": "Feature"}, {"geometry": {"coordinates": [2.1774173193179496, 41.42673758376823], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Star-bar", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.157095301532445, 41.37660449883098], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Cuba De Janeiro", "preu": 2.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1920163171794034, 41.43782999326304], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Casa CINCA", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1695627530637047, 41.37811341019837], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Istambul Kebab", "preu": 2.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.1696908285440615, 41.37800120586346], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "Madame Jasmine", "preu": 2.75}, "type": "Feature"}, {"geometry": {"coordinates": [2.1563896873683865, 41.373441817379465], "type": "Point"}, "properties": {"barri": "Sants-Montju\u00efc", "name": "Sta. Madrona", "preu": 2.2}, "type": "Feature"}, {"geometry": {"coordinates": [2.1884453003627358, 41.42328628666958], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "Maryvic", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.156053121865185, 41.37234998779161], "type": "Point"}, "properties": {"barri": "Sants-Montju\u00efc", "name": "El Rac\u00f3 de Montju\u00efc", "preu": 2.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1652924199786674, 41.38294863131283], "type": "Point"}, "properties": {"barri": "Ciutat Vella", "name": "La Cobra", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.174324880883583, 41.39363920794346], "type": "Point"}, "properties": {"barri": "Eixample", "name": "Libertine Cocktail Bar at Casa Bonay", "preu": 4.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.2016598733334223, 41.406742128359966], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Sports Bar Italian Food", "preu": 3.0}, "type": "Feature"}, {"geometry": {"coordinates": [2.2158731540256125, 41.410819989569795], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "Bar Restaurant L\u0027Illa del Mar", "preu": 2.5}, "type": "Feature"}, {"geometry": {"coordinates": [2.1924420736224084, 41.437656211447866], "type": "Point"}, "properties": {"barri": "Sant Andreu", "name": "BAR TAPAS 23", "preu": 2.1}, "type": "Feature"}, {"geometry": {"coordinates": [2.191322493601034, 41.39266024255506], "type": "Point"}, "properties": {"barri": "Sant Mart\u00ed", "name": "PETITA LLUM Caf\u00e9\u0026Bar", "preu": 2.3}, "type": "Feature"}, {"geometry": {"coordinates": [2.180947949027388, 41.42984843983926], "type": "Point"}, "properties": {"barri": "Nou Barris", "name": "Polosko Tapas Bar", "preu": 2.3}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_e35c562cf36064303bb4539787a144b2.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            var geo_json_e35c562cf36064303bb4539787a144b2searchControl = new L.Control.Search({
+                layer: geo_json_e35c562cf36064303bb4539787a144b2,
+                
+                propertyName: 'name',
+                
+                collapsed: true,
+                textPlaceholder: 'Cerca un bar...',
+                position:'topleft',
+            
+                initial: false,
+                
+                hideMarkerOnCollapse: true
+            
+                });
+                geo_json_e35c562cf36064303bb4539787a144b2searchControl.on('search:locationfound', function(e) {
+                    geo_json_e35c562cf36064303bb4539787a144b2.setStyle(function(feature){
+                        return feature.properties.style
+                    })
+                    
+                    if(e.layer._popup)
+                        e.layer.openPopup();
+                })
+                geo_json_e35c562cf36064303bb4539787a144b2searchControl.on('search:collapsed', function(e) {
+                        geo_json_e35c562cf36064303bb4539787a144b2.setStyle(function(feature){
+                            return feature.properties.style
+                    });
+                });
+            map_a2b3b7d77adc71feecff48667843c2f4.addControl( geo_json_e35c562cf36064303bb4539787a144b2searchControl );
+
+        
+    
+            var tag_filter_button_bf02f1d521bebd644b1b50aabdba8f62 = L.control.tagFilterButton(
+                {
+  "data": [
+"Sant Mart\u00ed",
+"Sant Andreu",
+"Eixample",
+"Les Corts",
+"Ciutat Vella",
+"Sarri\u00e0-Sant Gervasi",
+"Nou Barris",
+"Gr\u00e0cia",
+"Horta-Guinard\u00f3",
+"Sants-Montju\u00efc",
+],
+  "icon": "fa-filter",
+  "clearText": "clear",
+  "filterOnEveryClick": true,
+  "openPopupOnHover": false,
+  "layerName": "Districte",
+  "collapsed": true,
+}
+            ).addTo(map_a2b3b7d77adc71feecff48667843c2f4);
+        
+</script>
+</html>

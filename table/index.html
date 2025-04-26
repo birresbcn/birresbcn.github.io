@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Taula de Birres BCN</title>
+  <link rel="icon" href="../img/favicon.png">
+
+  
+  <!-- DataTables + PapaParse -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0px !important;
+      font-size: 32px;
+    }
+
+  </style>
+</head>
+<body class="table-page">
+
+  <a href="../" class="back-button"> <i class="fas fa-arrow-left"></i> Mapa</a>
+  
+  <h1>📊 Taula de Bars</h1>
+
+  <table id="birresTable" class="display">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Preu (€)</th>
+        <th>Districte</th>
+        <th>Enllaç</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Libraries -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

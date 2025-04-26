@@ -1,0 +1,365 @@
+/* =========================================
+   GENERAL Styles
+========================================= */
+
+/* =========================================
+   MAP Styles
+========================================= */
+#fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  #fab:hover {
+    transform: scale(1.1);
+  }
+
+  .fab-menu {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .fab-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .fab-menu a {
+    background-color: white;
+    padding: 8px 12px;
+    width: 56px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: background-color 0.2s ease;
+  }
+
+  .fab-menu a:hover {
+    background-color: #eee;
+  }
+
+ .fab-menu i {
+    color: #000000;
+ }
+
+/* =========================================
+   TABLE Styles
+========================================= */
+
+.table-page h1 {
+    background-color: #009688;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    text-align: center;
+    margin: 0;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #458db6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+table.dataTable {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1080px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background-color: #444;
+  color: white;
+}
+
+/* Styling for the search input */
+.dataTables_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px;
+    }
+
+.dataTables_filter {
+    display: flex !important;
+    text-align: center !important;
+    margin-bottom: 3rem;
+}
+
+.dataTables_filter input {
+    width: 250px;             /* Adjust width of search bar */
+    padding: 8px 12px;        /* Increase padding for comfort */
+    font-size: 24px;          /* Larger text size for readability */
+    border: 2px solid #444 !important;  /* Green border for a fresh look */
+    border-radius: 8px !important;       /* Rounded corners */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Style when the input is focused */
+.dataTables_filter input:focus {
+    border-color: #575757;    /* Change border color when focused */
+    box-shadow: 0 0 8px rgba(61, 61, 65, 0.5); /* Add a soft glow */
+    outline: none;            /* Remove default outline */
+}
+
+/* Optional: Modify the label for the search field */
+.dataTables_filter label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #444;           /* Green text for the label */
+}
+
+
+
+
+/* =========================================
+   ABOUT Styles
+========================================= */
+
+/* Main Content */
+
+body.about-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.about-page header {
+    background-color: #009688;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    text-align: center;
+}
+/* Main Section */
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.navbar h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.navbar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.group-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.group-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #009688;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin-bottom: 15px;
+}
+
+
+/* Regular Display: Flexbox for standard layout */
+.about-content {
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+/* Slider: Horizontal scrollable layout for smaller screens */
+.about-content-slider {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    margin-bottom: 2em;
+    gap: 20px;
+    /* justify-content: center; */
+    /* Allow content to scroll horizontally */
+}
+
+/* Person Card */
+.person {
+    flex-shrink: 0;
+    text-align: center;
+    max-width: 300px; /* Default width for larger screens */
+    width: 100%; /* Full width on mobile devices */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Person Image */
+.person img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Person Header */
+.person h3 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Person Paragraph */
+.person p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 10px;
+    word-wrap: break-word; /* Ensure long words break properly */
+    text-align: justify;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 1080px) {
+    .about-content-slider {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .person {
+        scroll-snap-align: start;
+    }
+}
+
+/* Larger screen adjustments to center the content */
+@media (min-width: 1081px) {
+    .about-content-slider {
+        justify-content: center; /* Center content for larger screens */
+    }
+}
+
+
+/* Project Info */
+.project-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.project-info h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.project-info p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.project-info strong {
+    color: #009688;
+}
+
+/* Tech Section */
+
+.tech h2 {
+    margin: 0;
+    padding: 0;
+}
+.tech ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tech li {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.tech ul li:before {
+    content: "✓ ";
+    color: #009688;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
