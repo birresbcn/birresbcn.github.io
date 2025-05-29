@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gràfiques - BirresBCN</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../img/favicon.png">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+</head>
+<body class="plot-page">
+
+<header>
+    <div class="navbar">
+        <h1>Gràfiques BirresBCN</h1>
+        <nav>
+            <ul>
+                <li><a href="../">Mapa</a></li>
+                <li><a href="../table/">Taula</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="grid-container">
+  <div id="summary" class="summary-box"></div>
+
+  <div id="plots" class="responsive-grid">
+    <div class="plot" id="histogramPlot"></div>
+    <div class="plot" id="barChart"></div>
+    <div class="plot" id="scatterPlot"></div>
+    <div class="plot" id="top5Table"></div>
+    <div class="plot wide-plot" id="donutPlot">
+      <div class="inner-grid" id="donut-grid"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

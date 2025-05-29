@@ -168,6 +168,7 @@ add_element_html(barcelona_map,"html",
     <div class="fab-menu" id="fabMenu">
       <a href="about/" target="_self"><i class="fa fa-info-circle"></i></a>
       <a href="table/" target="_self"><i class="fa fa-table"></i></a>
+      <a href="plots/" target="_self"><i class="fas fa-chart-column"></i></a>
       <a href="https://forms.gle/uKCZcvZNR6xTuZHCA"  target="_blank">+ &#127866</a>
     </div>
 """)
