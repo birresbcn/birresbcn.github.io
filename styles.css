@@ -2,6 +2,72 @@
    GENERAL Styles
 ========================================= */
 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+
+  
+header {
+    background-color: #009688;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    text-align: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.navbar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+a {
+  color: #1390ca;
+  text-decoration: none;
+}
+a:hover {
+    color: #45b4e7;
+    text-decoration: underline;
+    
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
 /* =========================================
    MAP Styles
 ========================================= */
@@ -67,74 +133,228 @@
     color: #000000;
  }
 
+
+/* =========================================
+   PLOT Styles
+========================================= */
+
+
+.grid-container {
+    max-width: 1800px;
+    margin: 0 auto;       /* centers container */
+    padding: 0 12px;      /* horizontal spacing */
+    box-sizing: border-box;
+  }
+  
+.summary-box {
+    margin: 12px;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
+  
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 1rem;
+}
+
+.plot {
+  background: white;
+  padding: 4px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  aspect-ratio: 1/1;  /* Keeps plots square-like */
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;  */
+  /* align-items: center;    */
+}
+
+
+  /* Donut plot spans two columns when space allows */
+  .wide-plot {
+    grid-column: span 2;
+    aspect-ratio: 2.04/1;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0rem;
+    display: flex;
+    gap: 16px;
+  }
+
+
+  @media (max-width: 639px) {
+    .wide-plot {
+      grid-column: span 1;
+    }
+  }
+
+  .inner-grid {
+    display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+    height: 100%; 
+    grid-auto-columns: 25%;
+    gap: 8px;
+    margin: 10px;
+  }
+
+  .inner-grid .featured {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+
+
+  .inner {
+    /* width: 100px;
+    height: 100px; */
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+
+
+  #top5Table {
+    padding: 10px;
+  }
+  
+  /* Table styling */
+  .top5-table {
+    width: 100%;
+    height: 80%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .top5-table th,
+  .top5-table td {
+    padding: 6px 8px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .top5-table thead {
+    background-color: #009688;
+    color: white;
+    white-space: nowrap;
+  }
+  
+  .top5-table tbody tr:nth-child(even) {
+    background-color: #f0f0f0;
+  }
+  
+  
+  
 /* =========================================
    TABLE Styles
 ========================================= */
 
-.table-page h1 {
-    background-color: #009688;
-    color: white;
-    padding-top: 40px;
-    padding-bottom: 25px;
-    text-align: center;
-    margin: 0;
-}
 
 .back-button {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 10px;
     padding: 10px 20px;
-    background-color: #458db6;
+    background-color: #009688;
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease,  opacity 0.3s ease;
     z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .back-button:hover {
-    background-color: #2980b9;
+    background-color: #2db4a7;
+    text-decoration: none;
+    color: white;
+}
+
+.back-button.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 table.dataTable {
-  border-collapse: collapse;
   width: 100%;
+  max-width: 1080px;
+  border-collapse: collapse;
   background-color: white;
   border-radius: 10px;
+  font-size: 1rem;
   overflow: hidden;
-  max-width: 1080px;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 440px) {
+  table.dataTable {
+    font-size: 0.8rem;
+  }
+
+ td {
+    padding: 5px !important;
+  }
+  th {
+    padding: 8px !important;
+  }
 }
 
 th, td {
-  padding: 10px;
+  padding: 8px;
   text-align: left;
 }
 
 thead {
   background-color: #444;
   color: white;
+  white-space: nowrap;
 }
 
 /* Styling for the search input */
 .dataTables_wrapper {
+    margin: 1rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 35px;
+    overflow-x: auto;
     }
 
 .dataTables_filter {
     display: flex !important;
     text-align: center !important;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .dataTables_filter input {
     width: 250px;             /* Adjust width of search bar */
+    max-width: 300px;
     padding: 8px 12px;        /* Increase padding for comfort */
-    font-size: 24px;          /* Larger text size for readability */
+    font-size: 20px;          /* Larger text size for readability */
     border: 2px solid #444 !important;  /* Green border for a fresh look */
     border-radius: 8px !important;       /* Rounded corners */
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
@@ -158,62 +378,15 @@ thead {
 }
 
 
-
-
 /* =========================================
    ABOUT Styles
 ========================================= */
 
-/* Main Content */
-
-body.about-page {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-.about-page header {
-    background-color: #009688;
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 4px;
-    text-align: center;
-}
 /* Main Section */
-main {
+ .main-content {
     padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-
-
-.navbar h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-.navbar nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.navbar nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.navbar nav ul li a:hover {
-    text-decoration: underline;
 }
 
 
@@ -228,7 +401,7 @@ main {
     border-radius: 10px;
 }
 
-h2 {
+.main-content h2 {
     color: #009688;
     font-size: 2rem;
     padding: 0.5rem;
@@ -352,14 +525,4 @@ h2 {
     color: #009688;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
 
-footer p {
-    margin: 0;
-}
