@@ -86,7 +86,7 @@ cmap = colors.LinearSegmentedColormap.from_list("custom_gradient", list(zip(map(
 
 # Mapa
 barcelona_map = folium.Map(location=pos_inicial, zoom_start=12, control_scale=True, tiles=estil_mapa)
-LocateControl(auto_start=True, keepCurrentZoomLevel=True).add_to(barcelona_map)
+LocateControl(auto_start=True, keepCurrentZoomLevel=True, drawCircle=False).add_to(barcelona_map)
 
 # HeatMap
 heat_data = dades[['latitude', 'longitude', 'Preu']].values.tolist()
