@@ -63,6 +63,16 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         });
       }
+      const backButton = document.querySelector('.back-button');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) {
+          backButton.classList.add('visible');
+        } else {
+          backButton.classList.remove('visible');
+        }
+      });
+
     }
   
   });
