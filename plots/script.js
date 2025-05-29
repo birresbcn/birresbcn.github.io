@@ -468,7 +468,7 @@ function funInfo(prices, locals, districts) {
 
 
 // Punto de entrada: carga el CSV y genera los gráficos
-fetch('../update/test.csv')
+fetch('../data/dades_birres.csv')
   .then(response => response.text())
   .then(text => {
     const rawData = parseCSVData(text);
