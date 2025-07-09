@@ -2,21 +2,13 @@
 Genera un fichero HTML con un mapa de precios de birra de BCN.
 
 MEJORAS:
-- Poner limites? Limitar zona BCN/CAT
-- Cambiar tipo mapa? (Leaflet)
-- Custom/other icons? (Colored icons)
-- Remove "Direcció" column?
-- MarkerCluster? 
-- Search/Filter?
-- TagFilterButton?
-- Add page with table? [DONE]
-- Add page with info+contribution? [DONE]
-- CSV/EXCEL with more data (similar to sheets)
-- Homogenizar CSV [DONE]
-- Remove duplicates (conserve only last) [DONE]
+- Poner limites? Limitar zona BCN/CAT [Maybe]
+- Search/Filter Price (Range)? [TagFilterButton]
+- Add buymeabear (buymeacoffe)
 
-QUESTIONS:
-- Que criterios seguimos? Son todos una mediana del mismo tipo?
+- Popup-font: inter
+- Popup-link: yellow box + icon ph
+
 
 Miki & Diegonti [26/04/2025]
 """
@@ -25,7 +17,7 @@ import pandas as pd
 from matplotlib import colors
 import folium
 from folium import Element
-from folium.plugins import HeatMap, Search, LocateControl, TagFilterButton
+from folium.plugins import  Search, LocateControl, TagFilterButton
 from pathlib import Path
 
 CWD = Path(__file__).parent.resolve()
@@ -89,8 +81,8 @@ barcelona_map = folium.Map(location=pos_inicial, zoom_start=12, control_scale=Tr
 LocateControl(auto_start=True, keepCurrentZoomLevel=True, drawCircle=False).add_to(barcelona_map)
 
 # HeatMap
-heat_data = dades[['latitude', 'longitude', 'Preu']].values.tolist()
-HeatMap(heat_data, min_opacity=0.2, gradient={"0.0": "white", "1.0": "black"}).add_to(barcelona_map)
+# heat_data = dades[['latitude', 'longitude', 'Preu']].values.tolist()
+# HeatMap(heat_data, min_opacity=0.2, gradient={"0.0": "white", "1.0": "black"}).add_to(barcelona_map)
 
 # Layer for colored markers
 marker_layer = folium.FeatureGroup(name="Bars").add_to(barcelona_map)
@@ -105,8 +97,13 @@ for _, row in dades.iterrows():
     norm = float(row['preu_norm'])
     fill_color = colors.to_hex(cmap(norm))
     name = row["Local"]
-    popup_text = f"""<b>{name}</b><br>{row['Preu']}€ ({row['Data']})<br><a href="{row['Link']}" target="_blank">Google Maps</a>"""
-    popup = folium.Popup(popup_text, max_width=300)
+    popup_text = f"""
+    <div class="popup-container">
+        <b class="popup-title">{name}</b>
+        <br><span class="popup-price">{row['Preu']}€</span> &nbsp;  <span class="popup-date">{row['Data']}</span>
+        <br><a class="popup-link" href="{row['Link']}" target="_blank">Google Maps</a>
+    </div>"""
+    popup = folium.Popup(popup_text, max_width=400)
 
     # Afegir marcadors personalitzats amb el nom del local i el preu
     folium.CircleMarker(
@@ -114,7 +111,7 @@ for _, row in dades.iterrows():
         radius = 10,             # Radi del marker
         popup = popup,           # HTML popup
         color = "black",         # Color contorn
-        weight = 1,              # Gruix contorn
+        weight = 0.5,              # Gruix contorn
         fill = True,             # Relleno
         fill_color = fill_color, # Color relleno
         fill_opacity = 1,        # Opacitat
@@ -174,6 +171,10 @@ add_element_html(barcelona_map,"html",
 """)
 
 # JS/CSS external files
+add_element_html(barcelona_map,"html",
+                 '<link rel="preconnect" href="https://rsms.me/">')
+add_element_html(barcelona_map,"html",
+                 '<link rel="stylesheet" href="https://rsms.me/inter/inter.css">')
 add_element_html(barcelona_map,"html",
                  '<script src="script.js"></script>')
 add_element_html(barcelona_map,"html",

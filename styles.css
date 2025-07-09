@@ -71,11 +71,43 @@ footer p {
 /* =========================================
    MAP Styles
 ========================================= */
+
+.leaflet-popup-tip {
+    display: none !important;
+}
+
+.popup-title{
+font-size: 16px;
+}
+.popup-price{
+  font-size: 12px;
+
+}.popup-date{
+  font-size: 12px;
+  color: gray;
+}
+
+.popup-container {
+  font-family: Inter !important;
+}
+
+.popup-container br {
+  margin: 4px;
+}
+
+.popup-link{
+  color: red;
+  font-size: 12px;
+  /* background-color: #F3D702; */
+  /* padding: 2px; */
+}
+
+
 #fab {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #f44336;
+    background-color: #a943ad;
     color: white;
     border: none;
     border-radius: 50%;
