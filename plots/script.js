@@ -453,7 +453,7 @@ function funInfo(prices, locals, districts) {
     <strong>${mostExpensiveDistrict}</strong> és on haurem de deixar més pasta,  
     mentre que a <strong>${cheapestDistrict}</strong> la cosa està més barata.</p>
     
-    <p>Fina sara, tenim registrat un total de <strong>${locals.length}</strong> bars a Barcelona,
+    <p>Fins ara, tenim registrats un total de <strong>${locals.length}</strong> bars a Barcelona,
     amb <strong>${mostCovered.district}</strong> liderant la llista amb <strong>${mostCovered.count}</strong> locals i  
     <strong>${leastCovered.district}</strong> tancant la cua amb només <strong>${leastCovered.count}</strong>.  
     Ara bé, encara ens falta molt per arribar als milers de bars que hi ha escampats per la ciutat.
