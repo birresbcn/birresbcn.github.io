@@ -82,7 +82,6 @@ RADIO NOSSA,"3,50 €","Carrer del Roser, 3, Sants-Montjuïc, 08004 Barcelona",S
 Mr White Cocktail Bar,"4,00 €","Carrer de Manso, 22, L'Eixample, 08015 Barcelona",Eixample,"41.37622203018065, 2.1601804600990824",https://maps.app.goo.gl/EZv27gZzR7LW7piBA,29/04/24
 Restaurant Amigó Sant Antoni,"3,15 €","Carrer de Tamarit, 181, L'Eixample, 08011 Barcelona",Eixample,"41.3793935577922, 2.161777698068039",https://maps.app.goo.gl/upUUQUsJMGnuYgTu7,2/05/24
 Bar Estudiantil,"3,00 €","Gran Via de les Corts Catalanes, 592, L'Eixample, 08007 Barcelona",Eixample,"41.38629424331948, 2.1645686655941936",https://maps.app.goo.gl/kUsjnB6SWE3foXka6,4/05/24
-Cerveseria Universitat,"3,20 €","Pl. de la Universitat, 11, L'Eixample, 08007 Barcelona",Eixample,"41.38621061759952, 2.164687690754541",https://maps.app.goo.gl/8Yh8d52sJ2EoCqix7,17/05/24
 Racó Art del Teatre,"2,70 €","Av. del Paral·lel, 38, Ciutat Vella, 08001 Barcelona",Ciutat Vella,"41.37502697329077, 2.172646754577266",https://maps.app.goo.gl/3tqujzsNnExPwPHG8,17/05/24
 La Barmutería,"2,80 €","Rda. de Sant Pau, 37, Eixample, 08015 Barcelona",Eixample,"41.37654438735631, 2.1656022168601727",https://maps.app.goo.gl/X1pa2JWnMrFLdkFP9,17/05/24
 L'Empanat,"2,20 €","Carrer de Monlau, 60, Sant Andreu, 08027 Barcelona",Sant Andreu,"41.424954225924125, 2.190465180121961",https://maps.app.goo.gl/e1a3bSpZBxymHXaNA,17/05/24
@@ -111,17 +110,23 @@ Bar Veni,"3,40 €",,Ciutat Vella,"41.3849322, 2.1667726",https://maps.app.goo.g
 Breik,"2,80 €",,Ciutat Vella,"41.3850884, 2.1661054",https://maps.app.goo.gl/fq7NU3ekqbnv8TQa6?g_st=ipc,8/07/25
 Santa Vegana,"3,90 €",,Ciutat Vella,"41.3803236, 2.1770807",https://maps.app.goo.gl/zCcJvQo4Dka928eP7?g_st=ipc,9/07/25
 Navia,"3,15 €",,Ciutat Vella,"41.3846701, 2.1847588",https://maps.app.goo.gl/mVF7GZBEtzq7qCeq7?g_st=ipc,16/07/25
+Vins PER TU,"2,80 €",,Sant Martí,"41.40738530523843, 2.187897193164582",https://maps.app.goo.gl/ofLhPX8SD7jn8Wqi6,18/07/25
+The Moon,"4,00 €",,Eixample,"41.3835927, 2.1591534",https://maps.app.goo.gl/FLXr87dqZeRuUiUs5,18/07/25
+Preet Tandori,"2,50 €",,Ciutat Vella,"41.37851973428091, 2.171562257068354",https://maps.app.goo.gl/mmxnAqCff7GWN9GbA,18/07/25
+Terra Mar,"2,40 €",,Sant Martí,"41.397093026376574, 2.201813520378062",https://maps.app.goo.gl/957TuTRdLaNqN8s76,18/07/25
 El Petit Brunch,"2,40 €",,Sant Andreu,"41.43407433162625, 2.189253029753489",https://maps.app.goo.gl/w1vs8FaL2S4bvfPV7,18/07/25
 Bodega Casas,"2,50 €",,Gràcia,"41.40841108454631, 2.1598342373248305",https://maps.app.goo.gl/KGf4BYq6o6XhKqGC7,18/07/25
-The Moon,"4,00 €",,Eixample,"41.3835927, 2.1591534",https://maps.app.goo.gl/FLXr87dqZeRuUiUs5,18/07/25
-Terra Mar,"2,40 €",,Sant Martí,"41.397093026376574, 2.201813520378062",https://maps.app.goo.gl/957TuTRdLaNqN8s76,18/07/25
-Preet Tandori,"2,50 €",,Ciutat Vella,"41.37851973428091, 2.171562257068354",https://maps.app.goo.gl/mmxnAqCff7GWN9GbA,18/07/25
-Vins PER TU,"2,80 €",,Sant Martí,"41.40738530523843, 2.187897193164582",https://maps.app.goo.gl/ofLhPX8SD7jn8Wqi6,18/07/25
 Mescladis,"2,50 €",,Ciutat Vella,"41.38742822405244, 2.1802920846583715",https://maps.app.goo.gl/twqWWoCEjAdFFyKJ6?g_st=ipc,23/07/25
 Bar Palxoca,"2,40 €",,Sant Andreu,"41.4329510, 2.1857918",https://maps.app.goo.gl/5kUE4drFwkoLp2F78,23/07/25
 Pico Fino,"2,50 €",,Sant Andreu,"41.42551406943567, 2.188341075637369",https://maps.app.goo.gl/HSiKHe9tcxv34rea7,24/07/25
 Priscilla Cafè,"3,50 €",,Eixample,"41.387679513640734, 2.1609206414915123",https://maps.app.goo.gl/eWkwxQZdsyRM4rpq5,27/07/25
 Henry's Bar,"3,00 €",,Sant Martí,"41.40276087581962, 2.1970035491753745",https://maps.app.goo.gl/oV5wa7ZCuKx4sQsQA,27/07/25
 Bar Filmax,"2,50 €",,Ciutat Vella,"41.37905377644506, 2.171234952827559",https://maps.app.goo.gl/x3ZACbT3TpMmiS2V6?g_st=ipc,28/07/25
-Bar Neptuno Cerveceria,"2,30 €",,Sant Andreu,"41.42134822435651, 2.180078304902375",https://maps.app.goo.gl/UMYcTRJSCHsZQ5ATA,1/08/25
 NEXT LEVEL Arcade Bar,"4,00 €",,Horta-Guinardó,"41.420345194139564, 2.1802367796445576",https://maps.app.goo.gl/zhaWRGXfEmAwku9S9,1/08/25
+Bar Neptuno Cerveceria,"2,30 €",,Sant Andreu,"41.42134822435651, 2.180078304902375",https://maps.app.goo.gl/UMYcTRJSCHsZQ5ATA,1/08/25
+Alquimia Barcelona,"3,50 €",,Eixample,"41.389400922570054, 2.1578379655778788",https://maps.app.goo.gl/a4v8effteG6uhK5r5,10/08/25
+La Taberna del Espit BCN,"3,00 €",,Eixample,"41.389446163537215, 2.1577442959318036",https://maps.app.goo.gl/EYtysgfRPUJpr33t6,10/08/25
+La Taska Show Bar,"3,20 €",,Eixample,"41.391914073949124, 2.1503336600299194",https://maps.app.goo.gl/zerAzbsr92ciegtC9,10/08/25
+Cerveseria Universitat,"2,90 €",,Eixample,"41.38621714871622, 2.164671889588128",https://maps.app.goo.gl/qasZgm8WTw6KbkJS9,10/08/25
+Candy Darling,"3,50 €",,Eixample,"41.3850660, 2.1629340",https://maps.app.goo.gl/JbQfPSSTsMtztknH8,10/08/25
+Nou Racó 169,"3,00 €",,Eixample,"41.391807725960426, 2.1501417595533496",https://maps.app.goo.gl/JZuGCQhp2t9GYyCT6,10/08/25
