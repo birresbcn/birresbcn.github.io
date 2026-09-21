@@ -44,7 +44,7 @@ output_html = CWD / "index.html"
 
 
 # Configuració mapa
-estil_mapa    = "CartoDB.Voyager"   # Opcions: https://leaflet-extras.github.io/leaflet-providers/preview/ (OpenStreetMap, CartoDB.Voyager, Esri.WorldTopoMap)
+estil_mapa    = "Esri.WorldTopoMap"   # Opcions: https://leaflet-extras.github.io/leaflet-providers/preview/ (OpenStreetMap, CartoDB.Voyager, Esri.WorldTopoMap)
 pos_inicial   = [41.3879, 2.1699]   # Posició inicial del mapa (coordenades)
 gradient_vals = {                   # Gradient de colors
     "0.0": 'white',
