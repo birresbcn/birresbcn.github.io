@@ -46,6 +46,8 @@ output_html = CWD / "index.html"
 # Configuració mapa
 estil_mapa    = "Esri.WorldTopoMap"   # Opcions: https://leaflet-extras.github.io/leaflet-providers/preview/ (OpenStreetMap, CartoDB.Voyager, Esri.WorldTopoMap)
 pos_inicial   = [41.3879, 2.1699]   # Posició inicial del mapa (coordenades)
+min_lat, max_lat = 41.30, 41.48     # Limits latitud
+min_lon, max_lon = 2.05, 2.26       # Limits longitud
 gradient_vals = {                   # Gradient de colors
     "0.0": 'white',
     "0.2": 'blue',
@@ -77,8 +79,10 @@ gradient_colors = [gradient_vals[k] for k in gradient_keys]
 cmap = colors.LinearSegmentedColormap.from_list("custom_gradient", list(zip(map(float, gradient_keys), gradient_colors)))
 
 # Mapa
-barcelona_map = folium.Map(location=pos_inicial, zoom_start=12, control_scale=True, tiles=estil_mapa)
+barcelona_map = folium.Map(location=pos_inicial, zoom_start=12, control_scale=True, tiles=estil_mapa,
+                           max_bounds=True,min_lat=min_lat,max_lat=max_lat,min_lon=min_lon,max_lon=max_lon,)
 LocateControl(auto_start=True, keepCurrentZoomLevel=True, drawCircle=False).add_to(barcelona_map)
+
 
 # HeatMap
 # heat_data = dades[['latitude', 'longitude', 'Preu']].values.tolist()
